@@ -5,10 +5,10 @@ export default function Header() {
   return (
     <View style={style.container}>
 
-      <View style={style.logoAlign}>
-        <Image source={require("../assets/Vector.png")} style={style.image} />
+
+        <Image source={require("../assets/Icons/Vector.png")} style={style.apple} />
         <Text style={style.tituloHeader}>iStore</Text>
-      </View>
+        <View style={style.notificacao}><Image source={require("../assets/Icons/notification.png")} style={style.icon}/></View>
       
     </View>
   );
@@ -16,22 +16,36 @@ export default function Header() {
 
 const style = StyleSheet.create({
   container: {
+    paddingLeft:50,
+    paddingRight:50,
     width: "100%",
     height: 120,
-    backgroundColor: "orange",
-
-  },
-  logoAlign:{
-    flexDirection: "row",
+    justifyContent:"space-around",
+    alignItems:"center",
+    flexDirection:"row"
   },
   tituloHeader: {
     width: "100%",
     color: "black",
-    paddingTop: 60,
     fontSize: 20,
+    fontWeight:"bold",
+    padding:22,
+    marginTop:5,
   },
-  image: {
+  apple: {
     width: 23,
-    height: 27,
-  },
+    height: 27,  
+},
+icon:{
+    width: 22,
+    height: 22,  
+},
+  notificacao:{
+    alignItems:"center",
+    justifyContent:"center",
+    backgroundColor:"#E5E5E5",
+    borderRadius:40,
+    width:38,
+    height:38,
+  }
 });

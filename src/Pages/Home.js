@@ -3,14 +3,15 @@ import { Text, View ,StyleSheet,Image } from 'react-native'
 
 export default function Home() {
   return (
-    <View>
+    <View style={style.body}>
        
     </View>
   )
 }
 
 const style = StyleSheet.create({
-    title: {
-        fontSize: 17
-    }
+    body:{
+        backgroundColor:"#E5E5E5",
+        flex:1
+    },
 })
