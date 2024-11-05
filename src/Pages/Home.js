@@ -1,6 +1,6 @@
 import React from "react";
-import { Text, View, StyleSheet, Image } from "react-native";
-import Categorie from "../Components/Categorie";
+import { View, StyleSheet } from "react-native";
+import CategoriasMenu from "../Components/CategoriasMenu";
 
 export default function Home() {
   return <View style={style.body}></View>;
@@ -8,7 +8,7 @@ export default function Home() {
 
 const style = StyleSheet.create({
   body: {
-    backgroundColor: "#E5E5E5",
+    backgroundColor: "#F0F0F0",
     flex: 1,
   },
 });

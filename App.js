@@ -1,16 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Home from './src/Pages/Home';
-import Header from './src/Components/Header';
+import { StatusBar } from "expo-status-bar";
+import Home from "./src/Pages/Home";
+import Header from "./src/Components/Header";
+import CategoriasMenu from "./src/Components/CategoriasMenu";
 
 export default function App() {
   return (
     <>
-      <Header/>
-      <Home/>
+      <StatusBar />
+      <Header />
+      <CategoriasMenu/>
     </>
   );
 }
-
-
-

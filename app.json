@@ -4,18 +4,13 @@
     "slug": "iStore",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/Vecttor.png",
+    "icon": "src/assets/Icons/Vector.png",
     "userInterfaceStyle": "light",
-    "splash": {
-    
-    },
+    "splash": {},
     "ios": {
       "supportsTablet": true
     },
-    "android": {
-     
-    },
-    "web": {
-    }
+    "android": {},
+    "web": {}
   }
 }
