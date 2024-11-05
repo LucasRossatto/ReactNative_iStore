@@ -53,8 +53,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 20,
     marginBottom: 20,
-    marginRight: 8,
-    marginLeft: 8,
+    marginLeft: 20,
     justifyContent: 'space-between',
   },
   item: {
@@ -64,7 +63,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 12,
     backgroundColor: '#fff',
-    padding: 10,
+    padding: 12,
   },
   itemAtivo: {
     backgroundColor: '#242424', 

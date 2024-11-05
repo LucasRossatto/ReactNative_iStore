@@ -29,8 +29,8 @@ const style = StyleSheet.create({
   container: {
     paddingTop: 50,
     backgroundColor: "#F0F0F0",
-    paddingLeft: 50,
-    paddingRight: 140,
+    paddingLeft: 30,
+    paddingRight: 130,
     width: "100%",
     height: 120,
     justifyContent: "space-between",
