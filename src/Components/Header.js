@@ -1,9 +1,11 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
-import { useNavigation } from "@react-navigation/native"; // Hook para navegação
+// Hook para navegação
+import { useNavigation } from "@react-navigation/native"; 
 
 const Header = () => {
-  const navigation = useNavigation(); // Usando o hook para navegação
+  // Usando o hook para navegação
+  const navigation = useNavigation(); 
 
   return (
     <View style={Headerstyle.container}>
@@ -12,14 +14,13 @@ const Header = () => {
         style={Headerstyle.backButton}
       >
         <View style={Headerstyle.touchableLink}>
-        <Image
-          source={require("../assets/Icons/Vector.png")}
-          style={Headerstyle.apple}
-        />
-        <Text style={Headerstyle.tituloHeader}>iStore</Text>
+          <Image
+            source={require("../assets/Icons/Vector.png")}
+            style={Headerstyle.apple}
+          />
+          <Text style={Headerstyle.tituloHeader}>iStore</Text>
         </View>
       </TouchableOpacity>
-
 
       <View style={Headerstyle.oval}>
         <Image
@@ -53,10 +54,9 @@ const Headerstyle = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
   },
-  touchableLink:{
-    flexDirection:"row",
+  touchableLink: {
+    flexDirection: "row",
     alignItems: "center",
-
   },
   tituloHeader: {
     width: "100%",

@@ -8,21 +8,22 @@ import {
   StyleSheet,
   Image,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native"; 
 
-// Importando icones das categorias
-import axios from "axios";
-import macImage from "../assets/Icons/mac.png";
+import axios from "axios"; 
+
+// Icons das categorias
+import macImage from "../assets/Icons/mac.png"; 
 import iphoneImage from "../assets/Icons/PhoneLandscape.png";
 import ipadImage from "../assets/Icons/Tablet.png";
 import watchImage from "../assets/Icons/Smartwatch.png";
 
 export default function Feed() {
-   // A URL inicial é '/mac'
-  const [categoriaAtiva, setCategoriaAtiva] = useState("/mac");
-  const [produtos, setProdutos] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [categoriaAtiva, setCategoriaAtiva] = useState("/mac"); // Estado da categoria ativa
+  const [produtos, setProdutos] = useState([]); // Estado dos produtos
+  const [loading, setLoading] = useState(true); // Estado de carregamento
 
-  // const que guarda as categorias
+  // array categorias
   const categorias = [
     { nome: "Mac", imagem: macImage, url: "/mac" },
     { nome: "Iphone", imagem: iphoneImage, url: "/iphone" },
@@ -30,35 +31,44 @@ export default function Feed() {
     { nome: "Watch", imagem: watchImage, url: "/watch" },
   ];
 
-  // Função para buscar os produtos da categoria selecionada
+  // Função para buscar os produtos da categoria
   const listarProdutos = (categoriaUrl) => {
-    setLoading(true);
+    setLoading(true); // Ativa loading
     axios
-      .get(`http://10.0.2.2:3000${categoriaUrl}`)
+      .get(`http://10.0.2.2:3000${categoriaUrl}`) // Fazendo a requisição com a URL da categoria
       .then((response) => {
-        setProdutos(response.data);
-        setLoading(false);
+        setProdutos(response.data); // Armazena os produtos no estado
+        setLoading(false); // Desativa o loading
       })
       .catch((error) => {
         console.error("Erro ao buscar produtos", error);
-        setLoading(false);
+        setLoading(false); // Desativa o loading em caso de erro
       });
   };
 
-  // Atualiza os produtos quando a categoria ativa mudar
   useEffect(() => {
-    listarProdutos(categoriaAtiva);
+    listarProdutos(categoriaAtiva); // Chama a função para listar produtos da categoria
   }, [categoriaAtiva]);
 
-  const renderItem = ({ item }) => (
+  const navigation = useNavigation(); // Hook para navegação
+
+  // Função para renderizar cada item da lista
+  const CardProdutos = ({ item }) => (
     <View style={ProductStyle.item}>
-      <Image style={ProductStyle.itemImage} source={{ uri: item.imagem }} />
-      <Text style={ProductStyle.itemAno}>{item.ano}</Text>
-      <Text style={ProductStyle.itemNome}>{item.nome}</Text>
+      <TouchableOpacity
+        onPress={() => {
+          // Navega para a tela de detalhes do produto, passando os dados do produto
+          navigation.navigate("DetalhesProduto", { item: item });
+        }}
+      >
+        <Image style={ProductStyle.itemImage} source={{ uri: item.imagem }} />
+        <Text style={ProductStyle.itemAno}>{item.ano}</Text>
+        <Text style={ProductStyle.itemNome}>{item.nome}</Text>
+      </TouchableOpacity>
     </View>
   );
 
-  // Icone de carregamento de produtos
+  // Exibe um carregamento enquanto os dados estão sendo buscados
   if (loading) {
     return (
       <View style={ProductStyle.loadingContainer}>
@@ -69,6 +79,7 @@ export default function Feed() {
 
   return (
     <>
+      {/* Categoria de navegação */}
       <View style={CategoriaStyle.container}>
         {categorias.map((categoria, index) => (
           <TouchableOpacity
@@ -77,8 +88,7 @@ export default function Feed() {
               CategoriaStyle.item,
               categoriaAtiva === categoria.url && CategoriaStyle.itemAtivo,
             ]}
-            // Atualiza a categoria ativa
-            onPress={() => setCategoriaAtiva(categoria.url)} 
+            onPress={() => setCategoriaAtiva(categoria.url)} // Atualiza a categoria ativa
           >
             <Image
               source={categoria.imagem}
@@ -99,12 +109,13 @@ export default function Feed() {
         ))}
       </View>
 
+      {/* Lista de produtos */}
       <View style={ProductStyle.container}>
         <FlatList
-          data={produtos}
-          keyExtractor={(item, index) => index.toString()}
-          renderItem={renderItem}
-          numColumns={2}
+          data={produtos} 
+          keyExtractor={(item) => item.id.toString()} 
+          renderItem={CardProdutos} // Cria os cards
+          numColumns={2} // Exibindo dois produtos por linha
           contentContainerStyle={ProductStyle.list}
         />
       </View>
@@ -150,7 +161,6 @@ const CategoriaStyle = StyleSheet.create({
     fontWeight: "bold",
   },
 });
-
 
 const ProductStyle = StyleSheet.create({
   container: {
@@ -201,4 +211,3 @@ const ProductStyle = StyleSheet.create({
     alignItems: "center",
   },
 });
-

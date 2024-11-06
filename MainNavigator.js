@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./src/Pages/Home";
 import Profile from "./src/Pages/Profile";
 import Header from "./src/Components/Header";
+import DetalhesProduto from "./src/Pages/DetalhesProduto";
 const Stack = createNativeStackNavigator();
 
 export default function MainNavigator() {
@@ -11,13 +12,13 @@ export default function MainNavigator() {
       <Stack.Navigator
         initialRouteName="Home"
         screenOptions={{
-          headerShown: true,
-          // Garante que o header será exibido
-          header: () => <Header />, // Usando o componente de cabeçalho customizado
+          headerShown: true, // Exibe o header
+          header: () => <Header />, // Chamando custom Header
         }}
       >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="DetalhesProduto" component={DetalhesProduto} />
       </Stack.Navigator>
     </NavigationContainer>
   );
