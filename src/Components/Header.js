@@ -1,31 +1,47 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native"; // Hook para navegação
 
-export default function Header() {
+const Header = () => {
+  const navigation = useNavigation(); // Usando o hook para navegação
+
   return (
-    <View style={style.container}>
-      <Image
-        source={require("../assets/Icons/Vector.png")}
-        style={style.apple}
-      />
-      <Text style={style.tituloHeader}>iStore</Text>
-      <View style={style.oval}>
+    <View style={Headerstyle.container}>
+      <TouchableOpacity
+        onPress={() => navigation.goBack()}
+        style={Headerstyle.backButton}
+      >
+        <View style={Headerstyle.touchableLink}>
+        <Image
+          source={require("../assets/Icons/Vector.png")}
+          style={Headerstyle.apple}
+        />
+        <Text style={Headerstyle.tituloHeader}>iStore</Text>
+        </View>
+      </TouchableOpacity>
+
+
+      <View style={Headerstyle.oval}>
         <Image
           source={require("../assets/Icons/notification.png")}
-          style={style.icon}
+          style={Headerstyle.icon}
         />
       </View>
-      <View style={style.oval}>
-        <Image
-          source={require("../assets/Icons/user.png")}
-          style={style.icon}
-        />
-      </View>
+      <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
+        <View style={Headerstyle.oval}>
+          <Image
+            source={require("../assets/Icons/user.png")}
+            style={Headerstyle.icon}
+          />
+        </View>
+      </TouchableOpacity>
     </View>
   );
-}
+};
 
-const style = StyleSheet.create({
+export default Header;
+
+const Headerstyle = StyleSheet.create({
   container: {
     paddingTop: 50,
     backgroundColor: "#F0F0F0",
@@ -36,6 +52,11 @@ const style = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     flexDirection: "row",
+  },
+  touchableLink:{
+    flexDirection:"row",
+    alignItems: "center",
+
   },
   tituloHeader: {
     width: "100%",

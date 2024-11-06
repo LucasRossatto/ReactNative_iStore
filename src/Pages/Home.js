@@ -1,9 +1,11 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Image, Text, TouchableOpacity } from "react-native";
 import Feed from "../Components/Feed";
 import Banner from "../Components/Banner";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Home() {
+  const navigation = useNavigation();
   return (
     <View style={style.body}>
       <Banner />
@@ -20,3 +22,4 @@ const style = StyleSheet.create({
     display: "flex",
   },
 });
+
