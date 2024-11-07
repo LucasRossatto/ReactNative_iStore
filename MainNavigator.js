@@ -17,7 +17,7 @@ export default function MainNavigator() {
         }}
       >
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Profile" component={Profile} options={{headerShown: false}} />
         <Stack.Screen name="DetalhesProduto" component={DetalhesProduto} options={{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>

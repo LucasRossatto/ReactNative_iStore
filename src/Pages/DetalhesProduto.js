@@ -39,7 +39,6 @@ export default function DetalhesProduto({ route }) {
           <Text style={styles.descricao}>{item.descricao}</Text>
           <Text style={styles.preco}>{item.preco}</Text>
         </View>
-
       </View>
     </>
   );

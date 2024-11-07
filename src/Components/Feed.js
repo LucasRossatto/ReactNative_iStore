@@ -64,6 +64,7 @@ export default function Feed() {
         <Image style={ProductStyle.itemImage} source={{ uri: item.imagem }} />
         <Text style={ProductStyle.itemAno}>{item.ano}</Text>
         <Text style={ProductStyle.itemNome}>{item.nome}</Text>
+        <View style={ProductStyle.DetailBtn}><Text style={ProductStyle.BtnText}>Detail</Text></View>
       </TouchableOpacity>
     </View>
   );
@@ -171,13 +172,23 @@ const ProductStyle = StyleSheet.create({
   list: {
     alignItems: "stretch",
   },
+  DetailBtn:{
+    backgroundColor:"#242424",
+    borderRadius:50,
+    paddingVertical:10,
+    marginTop:8
+  },
+  BtnText:{
+    color:"#fff",
+    textAlign:"center",
+    fontSize:12,
+  },
   item: {
     flex: 1,
     marginLeft: 10,
     marginRight: 10,
     marginBottom: 20,
     width: 207,
-    height: 172,
     backgroundColor: "#fff",
     borderRadius: 13,
     justifyContent: "center",
