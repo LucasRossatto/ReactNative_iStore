@@ -1,4 +1,6 @@
 import React from "react";
+
+
 import {
   View,
   Text,
@@ -33,11 +35,16 @@ export default function DetalhesProduto({ route }) {
         </View>
         <Image style={styles.image} source={{ uri: item.imagem }} />
 
-        <View>
-          <Text style={styles.nome}>{item.nome}</Text>
-          <Text style={styles.ano}>{item.ano}</Text>
+        <View style={styles.detalhes}>
+        <View style={styles.detalhesAlign}>
+         <View style={styles.detalhesTitulo}>
+            <Text style={styles.nome}>{item.nome}</Text>
+            <Text style={styles.ano}>{item.ano}</Text> 
+          </View>
+          <Text style={styles.preco}>R$ {item.preco}</Text>
+
           <Text style={styles.descricao}>{item.descricao}</Text>
-          <Text style={styles.preco}>{item.preco}</Text>
+          </View>
         </View>
 
       </View>
@@ -68,8 +75,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    padding: 20,
-    backgroundColor: "#F0F0F0",
+    backgroundColor: "#f0f0f0",
   },
   image: {
     width: "100%",
@@ -77,22 +83,38 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
   },
   nome: {
-    fontSize: 24,
+    fontSize: 29,
     fontWeight: "bold",
     marginVertical: 10,
   },
   ano: {
-    fontSize: 18,
+    fontSize: 12,
     color: "#555",
+    marginTop:13
   },
   descricao: {
     fontSize: 16,
     marginTop: 20,
   },
   preco: {
-    fontSize: 18,
-    color: "#000",
-    fontWeight: "bold",
+    fontSize: 21,
+    color: "#7893F4",
     marginTop: 10,
+  },
+  detalhes: {
+    backgroundColor: "#FFF",
+    fontSize: 300,
+  
+    flex: 2,
+    padding: 20,
+    borderRadius: 35
+  },
+  detalhesAlign: {
+    marginHorizontal: 10,
+  },
+  detalhesTitulo: {
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    gap: 10
   },
 });
