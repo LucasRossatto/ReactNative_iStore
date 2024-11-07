@@ -19,9 +19,9 @@ import ipadImage from "../assets/Icons/Tablet.png";
 import watchImage from "../assets/Icons/Smartwatch.png";
 
 export default function Feed() {
-  const [categoriaAtiva, setCategoriaAtiva] = useState("/mac"); // Estado da categoria ativa
-  const [produtos, setProdutos] = useState([]); // Estado dos produtos
-  const [loading, setLoading] = useState(true); // Estado de carregamento
+  const [categoriaAtiva, setCategoriaAtiva] = useState("/mac"); 
+  const [produtos, setProdutos] = useState([]); 
+  const [loading, setLoading] = useState(true); 
 
   // array categorias
   const categorias = [

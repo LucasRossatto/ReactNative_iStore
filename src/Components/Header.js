@@ -15,7 +15,7 @@ const Header = () => {
       >
         <View style={Headerstyle.touchableLink}>
           <Image
-            source={require("../assets/Icons/Vector.png")}
+            source={require("../assets/Icons/Apple.png")}
             style={Headerstyle.apple}
           />
           <Text style={Headerstyle.tituloHeader}>iStore</Text>

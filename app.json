@@ -4,7 +4,7 @@
     "slug": "iStore",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "src/assets/Icons/Vector.png",
+    "icon": "src/assets/Icons/Apple.png",
     "userInterfaceStyle": "light",
     "splash": {},
     "ios": {
