@@ -54,7 +54,7 @@ export default function DetalhesProduto({ route }) {
 
 const styles = StyleSheet.create({
   IconsContainer: {
-    paddingHorizontal: 10,
+    paddingHorizontal: 26,
     paddingTop: 56,
     paddingBottom: 56,
     flexDirection: "row",
@@ -90,16 +90,14 @@ const styles = StyleSheet.create({
   ano: {
     fontSize: 12,
     color: "#555",
-    marginTop:13
+    marginTop: 13,
   },
   descricao: {
     fontSize: 16,
-    marginTop: 20,
   },
   preco: {
     fontSize: 21,
     color: "#7893F4",
-    marginTop: 10,
   },
   detalhes: {
     backgroundColor: "#FFF",
