@@ -42,7 +42,34 @@ export default function DetalhesProduto({ route }) {
               <Text style={styles.nome}>{item.nome}</Text>
               <Text style={styles.ano}>{item.ano}</Text>
             </View>
+            <Text style={styles.modelo}>Modelo: {item.modelo}</Text> 
             <Text style={styles.preco}>R$ {item.preco}</Text>
+
+            <View>
+              <Text style={styles.titleOption}>CORES:</Text>
+
+              <View style={[styles.optionsContainer, { flexDirection: "row" }]}>
+                {item.ListaCores.map((cor, index) => (
+                  <TouchableOpacity
+                    key={index}
+                    onPress={() => setCorSelecionada(cor.nomeCor)}
+                    style={[
+                      styles.option,
+                      styles.optionAlign,
+                      corSelecionada === cor.nomeCor && {
+                        borderColor: "black",
+                        borderWidth: 1,
+                      },
+                    ]}
+                  >
+                    <View
+                      style={[styles.circleColor, { backgroundColor: cor.valorCor }]}
+                    />
+                    <Text style={styles.nomeCor}>{cor.nomeCor}</Text>
+                  </TouchableOpacity>
+                ))}
+              </View>
+            </View>
 
             <Text style={styles.descricao}>{item.descricao}</Text>
           </View>
