@@ -24,6 +24,28 @@ export default function Profile() {
 
       <Text style={style.Username}>Admin</Text>
       <Text style={style.UserEmail}>Admin@gmail.com</Text>
+
+      <View style={style.containerSettings}>
+        <Text style={style.OptionsTitle}>Opções do administrador</Text>
+
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Estoque");
+          }}
+        >
+          <View style={style.OptionsAlign}>
+            <View style={style.SubOptionsAlign}>
+              <Image
+                style={style.OptionsIcon}
+                source={require("../assets/Icons/estoque.png")}
+              />
+              <Text style={style.Options}>Administrar estoque</Text>
+            </View>
+
+            <Image source={require("../assets/Icons/arrow_rigth.png")} />
+          </View>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -43,6 +65,14 @@ const style = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
+  containerSettings: {
+    backgroundColor: "#fff",
+    flex: 1,
+    borderTopEndRadius: 25,
+    borderTopStartRadius: 25,
+    marginTop: 20,
+    padding: 20,
+  },
   profile: {
     fontSize: 16,
     fontWeight: "bold",
@@ -57,7 +87,30 @@ const style = StyleSheet.create({
     alignItems: "center",
     alignSelf: "center",
     flexDirection: "row",
-    marginBottom:5,
+    marginBottom: 5,
+  },
+  OptionsTitle: {
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  OptionsIcon: {
+    width: 22,
+    height: 19,
+  },
+  OptionsAlign: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  SubOptionsAlign:{
+    margin:8,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  Options: {
+    color: "#AEAEAE",
+    fontSize: 16,
+    margin: 10,
   },
   editBtn: {
     backgroundColor: "#fff",
@@ -72,14 +125,14 @@ const style = StyleSheet.create({
   },
   Username: {
     alignSelf: "center",
-    fontSize:20,
-    fontWeight:"bold",
-    marginVertical:5,
+    fontSize: 20,
+    fontWeight: "bold",
+    marginVertical: 5,
   },
   UserEmail: {
     alignSelf: "center",
     backgroundColor: "#E2E2E2",
-    fontSize:14,
+    fontSize: 14,
     paddingHorizontal: 20,
     paddingVertical: 2,
     borderRadius: 20,

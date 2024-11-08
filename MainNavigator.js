@@ -4,6 +4,7 @@ import Home from "./src/Pages/Home";
 import Profile from "./src/Pages/Profile";
 import Header from "./src/Components/Header";
 import DetalhesProduto from "./src/Pages/DetalhesProduto";
+import Estoque from "./src/Pages/Estoque";
 const Stack = createNativeStackNavigator();
 
 export default function MainNavigator() {
@@ -18,6 +19,7 @@ export default function MainNavigator() {
       >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Profile" component={Profile} options={{headerShown: false}} />
+        <Stack.Screen name="Estoque" component={Estoque} />
         <Stack.Screen name="DetalhesProduto" component={DetalhesProduto} options={{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
