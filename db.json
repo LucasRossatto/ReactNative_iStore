@@ -1,203 +1,145 @@
 {
-    "mac": [
-      {
-        "nome": "MacBook Air",
-        "modelo": "M2 2023",
-        "ano": 2023,
-        "preco": 999.99,
-        "imagem": "https://i.imgur.com/r2SYLeN.png"
-      },
-      {
-        "nome": "MacBook Pro",
-        "modelo": "14 polegadas, M2 Pro 2023",
-        "ano": 2023,
-        "preco": 1999.99,
-        "imagem": "https://i.imgur.com/r2SYLeN.png"
-      },
-      {
-        "nome": "iMac",
-        "modelo": "24 polegadas, M1 2021",
-        "ano": 2021,
-        "preco": 1299.99,
-        "imagem": "https://i.imgur.com/r2SYLeN.png"
-      },
-      {
-        "nome": "MacBook Pro",
-        "modelo": "16 polegadas, M1 Pro 2021",
-        "ano": 2021,
-        "preco": 2499.99,
-        "imagem": "https://i.imgur.com/r2SYLeN.png"
-      },
-      {
-        "nome": "Mac Mini",
-        "modelo": "M2 2023",
-        "ano": 2023,
-        "preco": 699.99,
-        "imagem": "https://i.imgur.com/r2SYLeN.png"
-      },
-      {
-        "nome": "MacBook Air",
-        "modelo": "13 polegadas, M1 2020",
-        "ano": 2020,
-        "preco": 999.99,
-        "imagem": "https://i.imgur.com/r2SYLeN.png"
-      },
-      {
-        "nome": "MacBook Air",
-        "modelo": "M2 2023",
-        "ano": 2023,
-        "preco": 999.99,
-        "imagem": "https://i.imgur.com/r2SYLeN.png"
-      },
-      {
-        "nome": "MacBook Pro",
-        "modelo": "14 polegadas, M2 Pro 2023",
-        "ano": 2023,
-        "preco": 1999.99,
-        "imagem": "https://i.imgur.com/r2SYLeN.png"
-      },
-      {
-        "nome": "iMac",
-        "modelo": "24 polegadas, M1 2021",
-        "ano": 2021,
-        "preco": 1299.99,
-        "imagem": "https://i.imgur.com/r2SYLeN.png"
-      },
-      {
-        "nome": "MacBook Pro",
-        "modelo": "16 polegadas, M1 Pro 2021",
-        "ano": 2021,
-        "preco": 2499.99,
-        "imagem": "https://i.imgur.com/r2SYLeN.png"
-      },
-      {
-        "nome": "Mac Mini",
-        "modelo": "M2 2023",
-        "ano": 2023,
-        "preco": 699.99,
-        "imagem": "https://i.imgur.com/r2SYLeN.png"
-      },
-      {
-        "nome": "MacBook Air",
-        "modelo": "13 polegadas, M1 2020",
-        "ano": 2020,
-        "preco": 999.99,
-        "imagem": "https://i.imgur.com/r2SYLeN.png"
-      }
-    ],
-    "iphone": [
-      {
-        "nome": "iPhone 15",
-        "modelo": "Pro Max 2023",
-        "ano": 2023,
-        "preco": 1399.99
-      },
-      {
-        "nome": "iPhone 14",
-        "modelo": "Pro 2022",
-        "ano": 2022,
-        "preco": 1099.99
-      },
-      {
-        "nome": "iPhone SE",
-        "modelo": "2022",
-        "ano": 2022,
-        "preco": 429.99
-      },
-      {
-        "nome": "iPhone 13",
-        "modelo": "Pro Max 2021",
-        "ano": 2021,
-        "preco": 1099.99
-      },
-      {
-        "nome": "iPhone 12",
-        "modelo": "Mini 2020",
-        "ano": 2020,
-        "preco": 699.99
-      },
-      {
-        "nome": "iPhone 11",
-        "modelo": "Pro 2019",
-        "ano": 2019,
-        "preco": 799.99
-      }
-    ],
-    "ipad": [
-      {
-        "nome": "iPad Pro",
-        "modelo": "12.9 polegadas, M2 2023",
-        "ano": 2023,
-        "preco": 1199.99
-      },
-      {
-        "nome": "iPad Air",
-        "modelo": "5ª geração, 2022",
-        "ano": 2022,
-        "preco": 599.99
-      },
-      {
-        "nome": "iPad",
-        "modelo": "10ª geração, 2022",
-        "ano": 2022,
-        "preco": 329.99
-      },
-      {
-        "nome": "iPad Pro",
-        "modelo": "11 polegadas, M1 2021",
-        "ano": 2021,
-        "preco": 799.99
-      },
-      {
-        "nome": "iPad Mini",
-        "modelo": "6ª geração, 2021",
-        "ano": 2021,
-        "preco": 499.99
-      },
-      {
-        "nome": "iPad Air",
-        "modelo": "4ª geração, 2020",
-        "ano": 2020,
-        "preco": 549.99
-      }
-    ],
-    "watch": [
-      {
-        "nome": "Apple Watch Ultra",
-        "modelo": "2023",
-        "ano": 2023,
-        "preco": 799.99
-      },
-      {
-        "nome": "Apple Watch Series 8",
-        "modelo": "2023",
-        "ano": 2023,
-        "preco": 399.99
-      },
-      {
-        "nome": "Apple Watch SE",
-        "modelo": "2ª geração, 2022",
-        "ano": 2022,
-        "preco": 249.99
-      },
-      {
-        "nome": "Apple Watch Series 7",
-        "modelo": "2021",
-        "ano": 2021,
-        "preco": 399.99
-      },
-      {
-        "nome": "Apple Watch Series 6",
-        "modelo": "2020",
-        "ano": 2020,
-        "preco": 349.99
-      },
-      {
-        "nome": "Apple Watch SE",
-        "modelo": "1ª geração, 2020",
-        "ano": 2020,
-        "preco": 249.99
-      }
-    ]
-  }
-  
+  "mac": [
+    {
+      "nome": "MacBook Air",
+      "modelo": "M2 2023",
+      "ano": 2023,
+      "preco": 999.99,
+      "imagem": "https://i.imgur.com/r2SYLeN.png",
+      "ListaCores": [
+        {"nomeCor": "Cinza Espacial", "valorCor": "#1D1F20"},
+        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"},
+        {"nomeCor": "Estelar", "valorCor": "#F5E1CE"}
+      ]
+    },
+    {
+      "nome": "MacBook Pro",
+      "modelo": "14 polegadas, M2 Pro 2023",
+      "ano": 2023,
+      "preco": 1999.99,
+      "imagem": "https://i.imgur.com/r2SYLeN.png",
+      "ListaCores": [
+        {"nomeCor": "Cinza Espacial", "valorCor": "#1D1F20"},
+        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"}
+      ]
+    },
+    {
+      "nome": "iMac",
+      "modelo": "24 polegadas, M1 2021",
+      "ano": 2021,
+      "preco": 1299.99,
+      "imagem": "https://i.imgur.com/r2SYLeN.png",
+      "ListaCores": [
+        {"nomeCor": "Azul", "valorCor": "#4C89D3"},
+        {"nomeCor": "Verde", "valorCor": "#A5D6A7"},
+        {"nomeCor": "Vermelho", "valorCor": "#D32F2F"},
+        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"}
+      ]
+    },
+    {
+      "nome": "MacBook Pro",
+      "modelo": "16 polegadas, M1 Pro 2021",
+      "ano": 2021,
+      "preco": 2499.99,
+      "imagem": "https://i.imgur.com/r2SYLeN.png",
+      "ListaCores": [
+        {"nomeCor": "Cinza Espacial", "valorCor": "#1D1F20"},
+        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"}
+      ]
+    },
+    {
+      "nome": "Mac Mini",
+      "modelo": "M2 2023",
+      "ano": 2023,
+      "preco": 699.99,
+      "imagem": "https://i.imgur.com/r2SYLeN.png",
+      "ListaCores": [
+        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"}
+      ]
+    },
+    {
+      "nome": "MacBook Air",
+      "modelo": "13 polegadas, M1 2020",
+      "ano": 2020,
+      "preco": 999.99,
+      "imagem": "https://i.imgur.com/r2SYLeN.png",
+      "ListaCores": [
+        {"nomeCor": "Cinza Espacial", "valorCor": "#1D1F20"},
+        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"},
+        {"nomeCor": "Dourado", "valorCor": "#FFD700"}
+      ]
+    }
+  ],
+  "iphone": [
+    {
+      "nome": "iPhone 15",
+      "modelo": "Pro Max 2023",
+      "ano": 2023,
+      "preco": 1399.99,
+      "ListaCores": [
+        {"nomeCor": "Titanium Natural", "valorCor": "#D7D7D7"},
+        {"nomeCor": "Titanium Azul", "valorCor": "#35495E"},
+        {"nomeCor": "Titanium Branco", "valorCor": "#E0E0E0"}
+      ]
+    },
+    {
+      "nome": "iPhone 14",
+      "modelo": "Pro 2022",
+      "ano": 2022,
+      "preco": 1099.99,
+      "ListaCores": [
+        {"nomeCor": "Roxo Profundo", "valorCor": "#5A3E91"},
+        {"nomeCor": "Dourado", "valorCor": "#FFD700"},
+        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"},
+        {"nomeCor": "Grafite", "valorCor": "#4A4A4A"}
+      ]
+    }
+  ],
+  "ipad": [
+    {
+      "nome": "iPad Pro",
+      "modelo": "12.9 polegadas, M2 2023",
+      "ano": 2023,
+      "preco": 1199.99,
+      "ListaCores": [
+        {"nomeCor": "Cinza Espacial", "valorCor": "#1D1F20"},
+        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"}
+      ]
+    },
+    {
+      "nome": "iPad Air",
+      "modelo": "5ª geração, 2022",
+      "ano": 2022,
+      "preco": 599.99,
+      "ListaCores": [
+        {"nomeCor": "Cinza Espacial", "valorCor": "#1D1F20"},
+        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"},
+        {"nomeCor": "Rosa", "valorCor": "#FFC0CB"},
+        {"nomeCor": "Roxo", "valorCor": "#8A2BE2"}
+      ]
+    }
+  ],
+  "watch": [
+    {
+      "nome": "Apple Watch Ultra",
+      "modelo": "2023",
+      "ano": 2023,
+      "preco": 799.99,
+      "ListaCores": [
+        {"nomeCor": "Titanium Natural", "valorCor": "#D7D7D7"}
+      ]
+    },
+    {
+      "nome": "Apple Watch Series 8",
+      "modelo": "2023",
+      "ano": 2023,
+      "preco": 399.99,
+      "ListaCores": [
+        {"nomeCor": "Midnight", "valorCor": "#2E2E3A"},
+        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"},
+        {"nomeCor": "Dourado", "valorCor": "#FFD700"},
+        {"nomeCor": "Product Red", "valorCor": "#FF3B30"}
+      ]
+    }
+  ]
+}
