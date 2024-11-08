@@ -1,6 +1,4 @@
-import React from "react";
-
-
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -12,8 +10,9 @@ import {
 import { useNavigation } from "@react-navigation/native";
 
 export default function DetalhesProduto({ route }) {
-  const { item } = route.params; // Pegando os dados do produto passado via navegação
-  const navigation = useNavigation(); // Hook para navegação
+  const { item } = route.params;
+  const navigation = useNavigation();
+  const [corSelecionada, setCorSelecionada] = useState(null);
 
   return (
     <>
@@ -33,17 +32,46 @@ export default function DetalhesProduto({ route }) {
             </View>
           </TouchableOpacity>
         </View>
-        <Image style={styles.image} source={{ uri: item.imagem }} />
 
+        <View style={styles.circle}>
+          <Image style={styles.image} source={{ uri: item.imagem }} />
+        </View>
         <View style={styles.detalhes}>
-        <View style={styles.detalhesAlign}>
-         <View style={styles.detalhesTitulo}>
-            <Text style={styles.nome}>{item.nome}</Text>
-            <Text style={styles.ano}>{item.ano}</Text> 
-          </View>
-          <Text style={styles.preco}>R$ {item.preco}</Text>
+          <View style={styles.detalhesAlign}>
+            <View style={styles.detalhesTitulo}>
+              <Text style={styles.nome}>{item.nome}</Text>
+              <Text style={styles.ano}>{item.ano}</Text>
+            </View>
+            <Text style={styles.modelo}>Modelo: {item.modelo}</Text> 
+            <Text style={styles.preco}>R$ {item.preco}</Text>
 
-          <Text style={styles.descricao}>{item.descricao}</Text>
+            <View>
+              <Text style={styles.titleOption}>CORES:</Text>
+
+              <View style={[styles.optionsContainer, { flexDirection: "row" }]}>
+                {item.ListaCores.map((cor, index) => (
+                  <TouchableOpacity
+                    key={index}
+                    onPress={() => setCorSelecionada(cor.nomeCor)}
+                    style={[
+                      styles.option,
+                      styles.optionAlign,
+                      corSelecionada === cor.nomeCor && {
+                        borderColor: "black",
+                        borderWidth: 1,
+                      },
+                    ]}
+                  >
+                    <View
+                      style={[styles.circleColor, { backgroundColor: cor.valorCor }]}
+                    />
+                    <Text style={styles.nomeCor}>{cor.nomeCor}</Text>
+                  </TouchableOpacity>
+                ))}
+              </View>
+            </View>
+
+            <Text style={styles.descricao}>{item.descricao}</Text>
           </View>
         </View>
       </View>
@@ -55,7 +83,6 @@ const styles = StyleSheet.create({
   IconsContainer: {
     paddingHorizontal: 26,
     paddingTop: 56,
-    paddingBottom: 56,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
@@ -86,6 +113,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginVertical: 10,
   },
+  modelo: {
+    fontSize: 16,  
+    color: "#888",  
+    marginBottom: 10,
+  },
   ano: {
     fontSize: 12,
     color: "#555",
@@ -101,17 +133,63 @@ const styles = StyleSheet.create({
   detalhes: {
     backgroundColor: "#FFF",
     fontSize: 300,
-  
     flex: 2,
     padding: 20,
-    borderRadius: 35
+    borderRadius: 35,
   },
   detalhesAlign: {
     marginHorizontal: 10,
   },
   detalhesTitulo: {
-    flexDirection: 'row', 
-    alignItems: 'center', 
-    gap: 10
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+  },
+  circle: {
+    backgroundColor: "#E5E5E5",
+    width: 285,
+    height: 285,
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    borderRadius: 1000,
+    marginVertical: 40,
+  },
+  options: {
+    marginTop: 30,
+  },
+  titleOption: {
+    fontWeight: "bold",
+    marginTop: 30,
+    color: "#363431",
+  },
+  circleColor: {
+    backgroundColor: "#D4A490",
+    borderRadius: 50,
+    width: 25,
+    height: 25,
+  },
+  optionAlign: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+  },
+  optionsContainer: {
+    marginTop: 5,
+    flexWrap: "wrap",
+  },
+  option: {
+    backgroundColor: "#F0F0F0",
+    height: 40,
+    borderRadius: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    marginRight: 10,
+    marginVertical: 6,
+    paddingHorizontal: 15,
+    paddingVertical: 1
+  },
+  nomeCor: {
+    fontSize: 14,
   },
 });
