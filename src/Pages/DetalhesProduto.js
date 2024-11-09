@@ -13,7 +13,11 @@ export default function DetalhesProduto({ route }) {
   const { item } = route.params;
   const navigation = useNavigation();
   const [corSelecionada, setCorSelecionada] = useState(null);
-
+  const [armazenamentoSelecionada, setArmazenamentoSelecionada] = useState(null);
+  const [curtido, setCurtido] = useState(false); 
+  const handleLikePress = () => {
+    setCurtido(!curtido);
+  };
   return (
     <>
       <StatusBar />
@@ -23,14 +27,19 @@ export default function DetalhesProduto({ route }) {
             <Image source={require("../assets/Icons/arrow_left.png")} />
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={handleLikePress}>
             <View style={styles.oval}>
               <Image
                 style={styles.like}
-                source={require("../assets/Icons/hearth.png")}
+                source={
+                  curtido
+                    ? require("../assets/Icons/hearth_red.png") // Ícone do coração vermelho quando curtido
+                    : require("../assets/Icons/hearth.png") // Ícone do coração padrão
+                }
               />
             </View>
           </TouchableOpacity>
+
         </View>
 
         <View style={styles.circle}>
@@ -42,7 +51,7 @@ export default function DetalhesProduto({ route }) {
               <Text style={styles.nome}>{item.nome}</Text>
               <Text style={styles.ano}>{item.ano}</Text>
             </View>
-            <Text style={styles.modelo}>Modelo: {item.modelo}</Text> 
+            <Text style={styles.modelo}>Modelo: {item.modelo}</Text>
             <Text style={styles.preco}>R$ {item.preco}</Text>
 
             <View>
@@ -63,7 +72,10 @@ export default function DetalhesProduto({ route }) {
                     ]}
                   >
                     <View
-                      style={[styles.circleColor, { backgroundColor: cor.valorCor }]}
+                      style={[
+                        styles.circleColor,
+                        { backgroundColor: cor.valorCor },
+                      ]}
                     />
                     <Text style={styles.nomeCor}>{cor.nomeCor}</Text>
                   </TouchableOpacity>
@@ -71,7 +83,30 @@ export default function DetalhesProduto({ route }) {
               </View>
             </View>
 
-            <Text style={styles.descricao}>{item.descricao}</Text>
+            <View>
+              <Text style={styles.titleOption}>ARMAZENAMENTO:</Text>
+
+              <View style={[styles.optionsContainer, { flexDirection: "row" }]}>
+                {item.ListaArmazenamentos.map((armazenamento, index) => (
+                  <TouchableOpacity
+                    key={index}
+                    onPress={() =>
+                      setArmazenamentoSelecionada(armazenamento.capacidade)
+                    }
+                    style={[
+                      styles.option,
+                      styles.optionAlign,
+                      armazenamentoSelecionada === armazenamento.capacidade && {
+                        borderColor: "black",
+                        borderWidth: 1,
+                      },
+                    ]}
+                  >
+                    <Text>{armazenamento.capacidade}</Text>
+                  </TouchableOpacity>
+                ))}
+              </View>
+            </View>
           </View>
         </View>
       </View>
@@ -114,8 +149,8 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   modelo: {
-    fontSize: 16,  
-    color: "#888",  
+    fontSize: 16,
+    color: "#888",
     marginBottom: 10,
   },
   ano: {
@@ -187,7 +222,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
     marginVertical: 6,
     paddingHorizontal: 15,
-    paddingVertical: 1
+    paddingVertical: 1,
   },
   nomeCor: {
     fontSize: 14,

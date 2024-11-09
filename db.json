@@ -10,6 +10,10 @@
         {"nomeCor": "Cinza Espacial", "valorCor": "#1D1F20"},
         {"nomeCor": "Prateado", "valorCor": "#C0C0C0"},
         {"nomeCor": "Estelar", "valorCor": "#F5E1CE"}
+      ],
+      "ListaArmazenamentos": [
+        {"capacidade": "256GB", "preco": 999.99},
+        {"capacidade": "512GB", "preco": 1249.99}
       ]
     },
     {
@@ -21,6 +25,10 @@
       "ListaCores": [
         {"nomeCor": "Cinza Espacial", "valorCor": "#1D1F20"},
         {"nomeCor": "Prateado", "valorCor": "#C0C0C0"}
+      ],
+      "ListaArmazenamentos": [
+        {"capacidade": "512GB", "preco": 1999.99},
+        {"capacidade": "1TB", "preco": 2499.99}
       ]
     },
     {
@@ -34,17 +42,10 @@
         {"nomeCor": "Verde", "valorCor": "#A5D6A7"},
         {"nomeCor": "Vermelho", "valorCor": "#D32F2F"},
         {"nomeCor": "Prateado", "valorCor": "#C0C0C0"}
-      ]
-    },
-    {
-      "nome": "MacBook Pro",
-      "modelo": "16 polegadas, M1 Pro 2021",
-      "ano": 2021,
-      "preco": 2499.99,
-      "imagem": "https://i.imgur.com/r2SYLeN.png",
-      "ListaCores": [
-        {"nomeCor": "Cinza Espacial", "valorCor": "#1D1F20"},
-        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"}
+      ],
+      "ListaArmazenamentos": [
+        {"capacidade": "256GB", "preco": 1299.99},
+        {"capacidade": "512GB", "preco": 1499.99}
       ]
     },
     {
@@ -55,18 +56,10 @@
       "imagem": "https://i.imgur.com/r2SYLeN.png",
       "ListaCores": [
         {"nomeCor": "Prateado", "valorCor": "#C0C0C0"}
-      ]
-    },
-    {
-      "nome": "MacBook Air",
-      "modelo": "13 polegadas, M1 2020",
-      "ano": 2020,
-      "preco": 999.99,
-      "imagem": "https://i.imgur.com/r2SYLeN.png",
-      "ListaCores": [
-        {"nomeCor": "Cinza Espacial", "valorCor": "#1D1F20"},
-        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"},
-        {"nomeCor": "Dourado", "valorCor": "#FFD700"}
+      ],
+      "ListaArmazenamentos": [
+        {"capacidade": "256GB", "preco": 699.99},
+        {"capacidade": "512GB", "preco": 899.99}
       ]
     }
   ],
@@ -80,6 +73,11 @@
         {"nomeCor": "Titanium Natural", "valorCor": "#D7D7D7"},
         {"nomeCor": "Titanium Azul", "valorCor": "#35495E"},
         {"nomeCor": "Titanium Branco", "valorCor": "#E0E0E0"}
+      ],
+      "ListaArmazenamentos": [
+        {"capacidade": "128GB", "preco": 1399.99},
+        {"capacidade": "256GB", "preco": 1499.99},
+        {"capacidade": "512GB", "preco": 1599.99}
       ]
     },
     {
@@ -92,6 +90,10 @@
         {"nomeCor": "Dourado", "valorCor": "#FFD700"},
         {"nomeCor": "Prateado", "valorCor": "#C0C0C0"},
         {"nomeCor": "Grafite", "valorCor": "#4A4A4A"}
+      ],
+      "ListaArmazenamentos": [
+        {"capacidade": "128GB", "preco": 1099.99},
+        {"capacidade": "256GB", "preco": 1199.99}
       ]
     }
   ],
@@ -104,6 +106,11 @@
       "ListaCores": [
         {"nomeCor": "Cinza Espacial", "valorCor": "#1D1F20"},
         {"nomeCor": "Prateado", "valorCor": "#C0C0C0"}
+      ],
+      "ListaArmazenamentos": [
+        {"capacidade": "128GB", "preco": 1199.99},
+        {"capacidade": "256GB", "preco": 1349.99},
+        {"capacidade": "512GB", "preco": 1499.99}
       ]
     },
     {
@@ -116,6 +123,10 @@
         {"nomeCor": "Prateado", "valorCor": "#C0C0C0"},
         {"nomeCor": "Rosa", "valorCor": "#FFC0CB"},
         {"nomeCor": "Roxo", "valorCor": "#8A2BE2"}
+      ],
+      "ListaArmazenamentos": [
+        {"capacidade": "64GB", "preco": 599.99},
+        {"capacidade": "256GB", "preco": 749.99}
       ]
     }
   ],
@@ -127,6 +138,9 @@
       "preco": 799.99,
       "ListaCores": [
         {"nomeCor": "Titanium Natural", "valorCor": "#D7D7D7"}
+      ],
+      "ListaArmazenamentos": [
+        {"capacidade": "32GB", "preco": 799.99}
       ]
     },
     {
@@ -139,6 +153,9 @@
         {"nomeCor": "Prateado", "valorCor": "#C0C0C0"},
         {"nomeCor": "Dourado", "valorCor": "#FFD700"},
         {"nomeCor": "Product Red", "valorCor": "#FF3B30"}
+      ],
+      "ListaArmazenamentos": [
+        {"capacidade": "32GB", "preco": 399.99}
       ]
     }
   ]
