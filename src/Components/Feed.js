@@ -9,14 +9,20 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
+import { useNavigation } from "@react-navigation/native";
+import axios from "axios";
 
 // Icons das categorias
+import macImage from "../assets/Icons/mac.png";
 import macImage from "../assets/Icons/mac.png";
 import iphoneImage from "../assets/Icons/PhoneLandscape.png";
 import ipadImage from "../assets/Icons/Tablet.png";
 import watchImage from "../assets/Icons/Smartwatch.png";
 
 export default function Feed() {
+  const [categoriaAtiva, setCategoriaAtiva] = useState("/mac");
+  const [produtos, setProdutos] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [categoriaAtiva, setCategoriaAtiva] = useState("/mac");
   const [produtos, setProdutos] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -30,24 +36,35 @@ export default function Feed() {
 
   const listarProdutos = (categoriaUrl) => {
     setLoading(true);
+    setLoading(true);
     axios
       .get(`http://10.0.2.2:3000${categoriaUrl}`)
+      .get(`http://10.0.2.2:3000${categoriaUrl}`)
       .then((response) => {
+        setProdutos(response.data);
+        setLoading(false);
         setProdutos(response.data);
         setLoading(false);
       })
       .catch((error) => {
         console.error("Erro ao buscar produtos", error);
         setLoading(false);
+        setLoading(false);
       });
   };
 
   useEffect(() => {
     listarProdutos(categoriaAtiva);
+    listarProdutos(categoriaAtiva);
   }, [categoriaAtiva]);
 
   const navigation = useNavigation();
 
+const CardProdutos = ({ item }) => {
+  console.log("Cores do item:", item.ListaCores); 
+  const navigation = useNavigation();
+
+  return (
 const CardProdutos = ({ item }) => {
   return (
     <View style={ProductStyle.item}>
@@ -73,15 +90,36 @@ const CardProdutos = ({ item }) => {
           )}
         </View>
 
+        <View style={ProductStyle.coresView}>
+          {item.ListaCores && item.ListaCores.length > 0 ? (
+            item.ListaCores.map((cor, index) => (
+              <View key={index} style={ProductStyle.optionAlign}>
+                <View
+                  style={[
+                    ProductStyle.circuloCor,
+                    { backgroundColor: cor.valorCor },
+                  ]}
+                />
+              </View>
+            ))
+          ) : (
+            <Text style={ProductStyle.noColors}>Sem cores disponíveis</Text>
+          )}
+        </View>
+
         <Image style={ProductStyle.itemImage} source={{ uri: item.imagem }} />
         <Text style={ProductStyle.itemAno}>{item.ano}</Text>
         <Text style={ProductStyle.itemNome}>{item.nome}</Text>
         <View style={ProductStyle.DetailBtn}>
           <Text style={ProductStyle.BtnText}>Details</Text>
         </View>
+        <View style={ProductStyle.DetailBtn}>
+          <Text style={ProductStyle.BtnText}>Details</Text>
+        </View>
       </TouchableOpacity>
     </View>
   );
+};
 };
 
   return (
@@ -94,6 +132,7 @@ const CardProdutos = ({ item }) => {
               CategoriaStyle.item,
               categoriaAtiva === categoria.url && CategoriaStyle.itemAtivo,
             ]}
+            onPress={() => setCategoriaAtiva(categoria.url)}
             onPress={() => setCategoriaAtiva(categoria.url)}
           >
             <Image
@@ -117,6 +156,10 @@ const CardProdutos = ({ item }) => {
 
       <View style={ProductStyle.container}>
         <FlatList
+          data={produtos}
+          keyExtractor={(item) => item.id.toString()}
+          renderItem={CardProdutos}
+          numColumns={2}
           data={produtos}
           keyExtractor={(item) => item.id.toString()}
           renderItem={CardProdutos}
@@ -181,7 +224,16 @@ const ProductStyle = StyleSheet.create({
     borderRadius: 50,
     paddingVertical: 10,
     marginTop: 8,
+  DetailBtn: {
+    backgroundColor: "#242424",
+    borderRadius: 50,
+    paddingVertical: 10,
+    marginTop: 8,
   },
+  BtnText: {
+    color: "#fff",
+    textAlign: "center",
+    fontSize: 12,
   BtnText: {
     color: "#fff",
     textAlign: "center",
@@ -224,6 +276,26 @@ const ProductStyle = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+  },
+  coresView: {
+    flexDirection: "row",
+    justifyContent: "center",
+    marginBottom: 15,
+  },
+  circuloCor: {
+    width: 10,
+    height: 10,
+    borderRadius: 50,
+  },
+  optionAlign: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginRight: 10,
+  },
+  noColors: {
+    color: "#999",
+    fontSize: 12,
+    textAlign: "center",
   },
   coresView: {
     flexDirection: "row",
