@@ -6,6 +6,7 @@ import {
   Image,
   TouchableOpacity,
   StatusBar,
+  ScrollView,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
@@ -13,13 +14,14 @@ export default function DetalhesProduto({ route }) {
   const { item } = route.params;
   const navigation = useNavigation();
   const [corSelecionada, setCorSelecionada] = useState(null);
-  const [armazenamentoSelecionada, setArmazenamentoSelecionada] = useState(null);
-  const [curtido, setCurtido] = useState(false); 
+  const [armazenamentoSelecionada, setArmazenamentoSelecionada] =
+    useState(null);
+  const [curtido, setCurtido] = useState(false);
   const handleLikePress = () => {
     setCurtido(!curtido);
   };
   return (
-    <>
+    <ScrollView>
       <StatusBar />
       <View style={styles.container}>
         <View style={styles.IconsContainer}>
@@ -39,7 +41,6 @@ export default function DetalhesProduto({ route }) {
               />
             </View>
           </TouchableOpacity>
-
         </View>
 
         <View style={styles.circle}>
@@ -110,7 +111,7 @@ export default function DetalhesProduto({ route }) {
           </View>
         </View>
       </View>
-    </>
+    </ScrollView>
   );
 }
 

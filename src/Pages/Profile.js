@@ -39,7 +39,7 @@ export default function Profile() {
                 style={style.OptionsIcon}
                 source={require("../assets/Icons/estoque.png")}
               />
-              <Text style={style.Options}>Administrar estoque</Text>
+              <Text style={style.Options}>Adicionar produtos ao estoque</Text>
             </View>
 
             <Image source={require("../assets/Icons/arrow_rigth.png")} />

@@ -7,14 +7,30 @@
       "preco": 999.99,
       "imagem": "https://i.imgur.com/r2SYLeN.png",
       "ListaCores": [
-        {"nomeCor": "Cinza Espacial", "valorCor": "#1D1F20"},
-        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"},
-        {"nomeCor": "Estelar", "valorCor": "#F5E1CE"}
+        {
+          "nomeCor": "Cinza Espacial",
+          "valorCor": "#1D1F20"
+        },
+        {
+          "nomeCor": "Prateado",
+          "valorCor": "#C0C0C0"
+        },
+        {
+          "nomeCor": "Estelar",
+          "valorCor": "#F5E1CE"
+        }
       ],
       "ListaArmazenamentos": [
-        {"capacidade": "256GB", "preco": 999.99},
-        {"capacidade": "512GB", "preco": 1249.99}
-      ]
+        {
+          "capacidade": "256GB",
+          "preco": 999.99
+        },
+        {
+          "capacidade": "512GB",
+          "preco": 1249.99
+        }
+      ],
+      "id": "6e1e"
     },
     {
       "nome": "MacBook Pro",
@@ -23,13 +39,26 @@
       "preco": 1999.99,
       "imagem": "https://i.imgur.com/r2SYLeN.png",
       "ListaCores": [
-        {"nomeCor": "Cinza Espacial", "valorCor": "#1D1F20"},
-        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"}
+        {
+          "nomeCor": "Cinza Espacial",
+          "valorCor": "#1D1F20"
+        },
+        {
+          "nomeCor": "Prateado",
+          "valorCor": "#C0C0C0"
+        }
       ],
       "ListaArmazenamentos": [
-        {"capacidade": "512GB", "preco": 1999.99},
-        {"capacidade": "1TB", "preco": 2499.99}
-      ]
+        {
+          "capacidade": "512GB",
+          "preco": 1999.99
+        },
+        {
+          "capacidade": "1TB",
+          "preco": 2499.99
+        }
+      ],
+      "id": "2e66"
     },
     {
       "nome": "iMac",
@@ -38,15 +67,34 @@
       "preco": 1299.99,
       "imagem": "https://i.imgur.com/r2SYLeN.png",
       "ListaCores": [
-        {"nomeCor": "Azul", "valorCor": "#4C89D3"},
-        {"nomeCor": "Verde", "valorCor": "#A5D6A7"},
-        {"nomeCor": "Vermelho", "valorCor": "#D32F2F"},
-        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"}
+        {
+          "nomeCor": "Azul",
+          "valorCor": "#4C89D3"
+        },
+        {
+          "nomeCor": "Verde",
+          "valorCor": "#A5D6A7"
+        },
+        {
+          "nomeCor": "Vermelho",
+          "valorCor": "#D32F2F"
+        },
+        {
+          "nomeCor": "Prateado",
+          "valorCor": "#C0C0C0"
+        }
       ],
       "ListaArmazenamentos": [
-        {"capacidade": "256GB", "preco": 1299.99},
-        {"capacidade": "512GB", "preco": 1499.99}
-      ]
+        {
+          "capacidade": "256GB",
+          "preco": 1299.99
+        },
+        {
+          "capacidade": "512GB",
+          "preco": 1499.99
+        }
+      ],
+      "id": "569d"
     },
     {
       "nome": "Mac Mini",
@@ -55,11 +103,44 @@
       "preco": 699.99,
       "imagem": "https://i.imgur.com/r2SYLeN.png",
       "ListaCores": [
-        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"}
+        {
+          "nomeCor": "Prateado",
+          "valorCor": "#C0C0C0"
+        }
       ],
       "ListaArmazenamentos": [
-        {"capacidade": "256GB", "preco": 699.99},
-        {"capacidade": "512GB", "preco": 899.99}
+        {
+          "capacidade": "256GB",
+          "preco": 699.99
+        },
+        {
+          "capacidade": "512GB",
+          "preco": 899.99
+        }
+      ],
+      "id": "1a2d"
+    },
+    {
+      "id": "501a",
+      "nome": "Mac teste",
+      "modelo": "2024 teste",
+      "ano": "2024",
+      "preco": "5",
+      "ListaCores": [
+        {
+          "nomeCor": "preto",
+          "valorCor": "#000"
+        },
+        {
+          "nomeCor": "offwhite",
+          "valorCor": "#F2F2F2"
+        }
+      ],
+      "ListaArmazenamentos": [
+        {
+          "capacidade": "512GB",
+          "preco": "6"
+        }
       ]
     }
   ],
@@ -70,15 +151,34 @@
       "ano": 2023,
       "preco": 1399.99,
       "ListaCores": [
-        {"nomeCor": "Titanium Natural", "valorCor": "#D7D7D7"},
-        {"nomeCor": "Titanium Azul", "valorCor": "#35495E"},
-        {"nomeCor": "Titanium Branco", "valorCor": "#E0E0E0"}
+        {
+          "nomeCor": "Titanium Natural",
+          "valorCor": "#D7D7D7"
+        },
+        {
+          "nomeCor": "Titanium Azul",
+          "valorCor": "#35495E"
+        },
+        {
+          "nomeCor": "Titanium Branco",
+          "valorCor": "#E0E0E0"
+        }
       ],
       "ListaArmazenamentos": [
-        {"capacidade": "128GB", "preco": 1399.99},
-        {"capacidade": "256GB", "preco": 1499.99},
-        {"capacidade": "512GB", "preco": 1599.99}
-      ]
+        {
+          "capacidade": "128GB",
+          "preco": 1399.99
+        },
+        {
+          "capacidade": "256GB",
+          "preco": 1499.99
+        },
+        {
+          "capacidade": "512GB",
+          "preco": 1599.99
+        }
+      ],
+      "id": "8cc8"
     },
     {
       "nome": "iPhone 14",
@@ -86,15 +186,34 @@
       "ano": 2022,
       "preco": 1099.99,
       "ListaCores": [
-        {"nomeCor": "Roxo Profundo", "valorCor": "#5A3E91"},
-        {"nomeCor": "Dourado", "valorCor": "#FFD700"},
-        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"},
-        {"nomeCor": "Grafite", "valorCor": "#4A4A4A"}
+        {
+          "nomeCor": "Roxo Profundo",
+          "valorCor": "#5A3E91"
+        },
+        {
+          "nomeCor": "Dourado",
+          "valorCor": "#FFD700"
+        },
+        {
+          "nomeCor": "Prateado",
+          "valorCor": "#C0C0C0"
+        },
+        {
+          "nomeCor": "Grafite",
+          "valorCor": "#4A4A4A"
+        }
       ],
       "ListaArmazenamentos": [
-        {"capacidade": "128GB", "preco": 1099.99},
-        {"capacidade": "256GB", "preco": 1199.99}
-      ]
+        {
+          "capacidade": "128GB",
+          "preco": 1099.99
+        },
+        {
+          "capacidade": "256GB",
+          "preco": 1199.99
+        }
+      ],
+      "id": "e53c"
     }
   ],
   "ipad": [
@@ -104,14 +223,30 @@
       "ano": 2023,
       "preco": 1199.99,
       "ListaCores": [
-        {"nomeCor": "Cinza Espacial", "valorCor": "#1D1F20"},
-        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"}
+        {
+          "nomeCor": "Cinza Espacial",
+          "valorCor": "#1D1F20"
+        },
+        {
+          "nomeCor": "Prateado",
+          "valorCor": "#C0C0C0"
+        }
       ],
       "ListaArmazenamentos": [
-        {"capacidade": "128GB", "preco": 1199.99},
-        {"capacidade": "256GB", "preco": 1349.99},
-        {"capacidade": "512GB", "preco": 1499.99}
-      ]
+        {
+          "capacidade": "128GB",
+          "preco": 1199.99
+        },
+        {
+          "capacidade": "256GB",
+          "preco": 1349.99
+        },
+        {
+          "capacidade": "512GB",
+          "preco": 1499.99
+        }
+      ],
+      "id": "fa64"
     },
     {
       "nome": "iPad Air",
@@ -119,15 +254,34 @@
       "ano": 2022,
       "preco": 599.99,
       "ListaCores": [
-        {"nomeCor": "Cinza Espacial", "valorCor": "#1D1F20"},
-        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"},
-        {"nomeCor": "Rosa", "valorCor": "#FFC0CB"},
-        {"nomeCor": "Roxo", "valorCor": "#8A2BE2"}
+        {
+          "nomeCor": "Cinza Espacial",
+          "valorCor": "#1D1F20"
+        },
+        {
+          "nomeCor": "Prateado",
+          "valorCor": "#C0C0C0"
+        },
+        {
+          "nomeCor": "Rosa",
+          "valorCor": "#FFC0CB"
+        },
+        {
+          "nomeCor": "Roxo",
+          "valorCor": "#8A2BE2"
+        }
       ],
       "ListaArmazenamentos": [
-        {"capacidade": "64GB", "preco": 599.99},
-        {"capacidade": "256GB", "preco": 749.99}
-      ]
+        {
+          "capacidade": "64GB",
+          "preco": 599.99
+        },
+        {
+          "capacidade": "256GB",
+          "preco": 749.99
+        }
+      ],
+      "id": "8f0e"
     }
   ],
   "watch": [
@@ -137,11 +291,18 @@
       "ano": 2023,
       "preco": 799.99,
       "ListaCores": [
-        {"nomeCor": "Titanium Natural", "valorCor": "#D7D7D7"}
+        {
+          "nomeCor": "Titanium Natural",
+          "valorCor": "#D7D7D7"
+        }
       ],
       "ListaArmazenamentos": [
-        {"capacidade": "32GB", "preco": 799.99}
-      ]
+        {
+          "capacidade": "32GB",
+          "preco": 799.99
+        }
+      ],
+      "id": "9e6a"
     },
     {
       "nome": "Apple Watch Series 8",
@@ -149,14 +310,30 @@
       "ano": 2023,
       "preco": 399.99,
       "ListaCores": [
-        {"nomeCor": "Midnight", "valorCor": "#2E2E3A"},
-        {"nomeCor": "Prateado", "valorCor": "#C0C0C0"},
-        {"nomeCor": "Dourado", "valorCor": "#FFD700"},
-        {"nomeCor": "Product Red", "valorCor": "#FF3B30"}
+        {
+          "nomeCor": "Midnight",
+          "valorCor": "#2E2E3A"
+        },
+        {
+          "nomeCor": "Prateado",
+          "valorCor": "#C0C0C0"
+        },
+        {
+          "nomeCor": "Dourado",
+          "valorCor": "#FFD700"
+        },
+        {
+          "nomeCor": "Product Red",
+          "valorCor": "#FF3B30"
+        }
       ],
       "ListaArmazenamentos": [
-        {"capacidade": "32GB", "preco": 399.99}
-      ]
+        {
+          "capacidade": "32GB",
+          "preco": 399.99
+        }
+      ],
+      "id": "81e8"
     }
   ]
 }
