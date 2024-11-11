@@ -19,7 +19,7 @@ import iphoneImage from "../assets/Icons/PhoneLandscape.png";
 import ipadImage from "../assets/Icons/Tablet.png";
 import watchImage from "../assets/Icons/Smartwatch.png";
 
-export default function Estoque() {
+export default function CriarProduto() {
   const navigation = useNavigation();
 
   const [categoriaAtiva, setCategoriaAtiva] = useState("/mac");

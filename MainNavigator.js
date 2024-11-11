@@ -4,7 +4,7 @@ import Home from "./src/Pages/Home";
 import Profile from "./src/Pages/Profile";
 import Header from "./src/Components/Header";
 import DetalhesProduto from "./src/Pages/DetalhesProduto";
-import Estoque from "./src/Pages/Estoque";
+import Estoque from "./src/Pages/CriarProduto";
 import SplashScreen from "./src/Pages/Splash"; 
 
 
