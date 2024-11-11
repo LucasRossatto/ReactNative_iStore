@@ -30,7 +30,7 @@ export default function Profile() {
 
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("Estoque");
+            navigation.navigate("CriarProduto");
           }}
         >
           <View style={style.OptionsAlign}>
@@ -40,6 +40,24 @@ export default function Profile() {
                 source={require("../assets/Icons/estoque.png")}
               />
               <Text style={style.Options}>Adicionar produtos ao estoque</Text>
+            </View>
+
+            <Image source={require("../assets/Icons/arrow_rigth.png")} />
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("EditarProduto");
+          }}
+        >
+          <View style={style.OptionsAlign}>
+            <View style={style.SubOptionsAlign}>
+              <Image
+                style={style.OptionsIcon}
+                source={require("../assets/Icons/estoque.png")}
+              />
+              <Text style={style.Options}>Editar produtos do estoque</Text>
             </View>
 
             <Image source={require("../assets/Icons/arrow_rigth.png")} />

@@ -3,7 +3,7 @@
     {
       "nome": "MacBook Air",
       "modelo": "M2 2023",
-      "ano": 2023,
+      "ano": "2",
       "preco": 999.99,
       "imagem": "https://i.imgur.com/r2SYLeN.png",
       "ListaCores": [
@@ -183,7 +183,7 @@
     {
       "nome": "iPhone 14",
       "modelo": "Pro 2022",
-      "ano": 2022,
+      "ano": "2022",
       "preco": 1099.99,
       "ListaCores": [
         {
@@ -206,14 +206,50 @@
       "ListaArmazenamentos": [
         {
           "capacidade": "128GB",
-          "preco": 1099.99
+          "preco": "12000"
         },
         {
           "capacidade": "256GB",
-          "preco": 1199.99
+          "preco": "13000"
         }
       ],
       "id": "e53c"
+    },
+    {
+      "id": "254b",
+      "nome": "iPhone 16 Pro Max",
+      "modelo": "Produto do ano",
+      "ano": "2024",
+      "preco": "11999",
+      "ListaCores": [
+        {
+          "nomeCor": "Titaniun ",
+          "valorCor": "#878681"
+        },
+        {
+          "nomeCor": "Product Red",
+          "valorCor": "red"
+        },
+        {
+          "nomeCor": "Preto ",
+          "valorCor": "#000"
+        }
+      ],
+      "ListaArmazenamentos": [
+        {
+          "capacidade": "512GB",
+          "preco": ""
+        },
+        {
+          "capacidade": "1TB",
+          "preco": ""
+        },
+        {
+          "capacidade": "2TB",
+          "preco": ""
+        }
+      ],
+      "imagem": "https://m.media-amazon.com/images/I/515ahREcK+L._AC_SX679_.jpg"
     }
   ],
   "ipad": [
@@ -286,7 +322,7 @@
   ],
   "watch": [
     {
-      "nome": "Apple Watch Ultra",
+      "nome": "relogio",
       "modelo": "2023",
       "ano": 2023,
       "preco": 799.99,
@@ -305,7 +341,7 @@
       "id": "9e6a"
     },
     {
-      "nome": "Apple Watch Series 8",
+      "nome": "",
       "modelo": "2023",
       "ano": 2023,
       "preco": 399.99,

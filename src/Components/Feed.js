@@ -173,9 +173,7 @@ const ProductStyle = StyleSheet.create({
     marginLeft: 10,
     marginRight: 10,
   },
-  list: {
-    alignItems: "stretch",
-  },
+  
   DetailBtn: {
     backgroundColor: "#242424",
     borderRadius: 50,
@@ -192,7 +190,7 @@ const ProductStyle = StyleSheet.create({
     marginLeft: 10,
     marginRight: 10,
     marginBottom: 20,
-    width: 207,
+    maxWidth: 167,
     backgroundColor: "#fff",
     borderRadius: 13,
     justifyContent: "center",
