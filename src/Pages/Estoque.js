@@ -50,37 +50,43 @@ export default function Estoque() {
 
   const CardProdutos = ({ item }) => {
     return (
-      <View style={ProductStyle.item}>
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate("DetalhesProduto", { item: item });
-          }}
-        >
-          <View style={ProductStyle.coresView}>
-            {item.ListaCores && item.ListaCores.length > 0 ? (
-              item.ListaCores.map((cor, index) => (
-                <View key={index} style={ProductStyle.optionAlign}>
-                  <View
-                    style={[
-                      ProductStyle.circuloCor,
-                      { backgroundColor: cor.valorCor },
-                    ]}
-                  />
-                </View>
-              ))
-            ) : (
-              <Text style={ProductStyle.noColors}>Sem cores disponíveis</Text>
-            )}
-          </View>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("DetalhesProduto", { item: item });
+        }}
+      >
+        <View style={ProductStyle.item}>
+          {!item.imagem ? (
+            <Text >Imagem indisponível</Text> 
+          ) : (
+            <Image source={{ uri: item.imagem }} style={style.image} /> 
+          )}
 
-          <Image style={ProductStyle.itemImage} source={{ uri: item.imagem }} />
-          <Text style={ProductStyle.itemAno}>id: {item.id}</Text>
-          <Text style={ProductStyle.itemNome}>{item.nome}</Text>
-          <View style={ProductStyle.DetailBtn}>
-            <Text style={ProductStyle.BtnText}>Details</Text>
+          <View style={style.viewDetalhes}>
+            <Text style={style.titleText}>{item.nome}</Text>
+            <Text style={style.subTitleText}>{item.modelo}</Text>
+            <Text>#{item.id}</Text>
+            <Text>R$ {item.preco}</Text>
+
+            <View style={ProductStyle.coresView}>
+              {item.ListaCores && item.ListaCores.length > 0 ? (
+                item.ListaCores.map((cor, index) => (
+                  <View key={index} style={ProductStyle.optionAlign}>
+                    <View
+                      style={[
+                        ProductStyle.circuloCor,
+                        { backgroundColor: cor.valorCor },
+                      ]}
+                    />
+                  </View>
+                ))
+              ) : (
+                <Text style={ProductStyle.noColors}>Sem cores disponíveis</Text>
+              )}
+            </View>
           </View>
-        </TouchableOpacity>
-      </View>
+        </View>
+      </TouchableOpacity>
     );
   };
 
@@ -129,7 +135,6 @@ export default function Estoque() {
           data={produtos}
           keyExtractor={(item) => item.id.toString()}
           renderItem={CardProdutos}
-          contentContainerStyle={ProductStyle.list}
         />
       </View>
     </>
@@ -196,14 +201,11 @@ const ProductStyle = StyleSheet.create({
   },
   item: {
     flex: 1,
-    marginLeft: 20,
-    marginRight: 10,
+    marginHorizontal: 20,
     marginBottom: 20,
-    maxWidth: 167,
     backgroundColor: "#fff",
     borderRadius: 13,
-    justifyContent: "center",
-    alignItems: "center",
+    flexDirection: "row",
     padding: 10,
   },
   itemNome: {
@@ -234,8 +236,8 @@ const ProductStyle = StyleSheet.create({
   },
   coresView: {
     flexDirection: "row",
-    justifyContent: "center",
-    marginBottom: 15,
+    justifyContent: "flex-start",
+    marginVertical: 6,
   },
   circuloCor: {
     width: 10,
@@ -266,5 +268,89 @@ const style = StyleSheet.create({
   title: {
     fontSize: 20,
     paddingHorizontal: 20,
+  },
+  body: {
+    backgroundColor: "#F0F0F0",
+    flex: 1,
+    display: "flex",
+  },
+  top: {
+    paddingHorizontal: 10,
+    gap: 16,
+    marginHorizontal: 10,
+    paddingBottom: 36,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  title: {
+    marginLeft: 20,
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  titleText: {
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  subTitle: {
+    marginTop: 10,
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  subTitleText: {
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  form: {
+    backgroundColor: "#FFFD",
+    marginHorizontal: 20,
+    borderRadius: 12,
+    marginTop: 15,
+    paddingHorizontal: 20,
+  },
+  inputID: {
+    marginHorizontal: 20,
+    borderWidth: 1,
+    borderColor: "#333",
+    padding: 10,
+    marginBottom: 10,
+    borderRadius: 12,
+  },
+  buttonStyleID: {
+    backgroundColor: "grey",
+    padding: 15,
+    borderRadius: 50,
+    alignItems: "center",
+    marginBottom: 10,
+    marginHorizontal: 20,
+  },
+  buttonStyleCadastrar: {
+    backgroundColor: "#242424",
+    padding: 15,
+    borderRadius: 50,
+    alignItems: "center",
+    marginVertical: 5,
+    marginBottom: 16,
+  },
+  buttonText: {
+    color: "white",
+    fontSize: 16,
+    textTransform: "uppercase",
+  },
+  image: {
+    width: 100,
+    height: 100,
+    resizeMode: "contain",
+  },
+  cardDelete: {
+    paddingVertical: 12,
+    flexDirection: "row",
+  },
+  viewDetalhes: {
+    marginLeft: 20,
   },
 });
