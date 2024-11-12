@@ -82,6 +82,25 @@ export default function Profile() {
           </View>
         </TouchableOpacity>
 
+
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("FeedEstoque");
+          }}
+        >
+          <View style={style.OptionsAlign}>
+            <View style={style.SubOptionsAlign}>
+              <Image
+                style={style.OptionsIcon}
+                source={require("../assets/Icons/estoque.png")}
+              />
+              <Text style={style.Options}>Vizualizar produtos do estoque</Text>
+            </View>
+
+            <Image source={require("../assets/Icons/arrow_rigth.png")} />
+          </View>
+        </TouchableOpacity>
+
       </View>
     </View>
   );
@@ -140,7 +159,8 @@ const style = StyleSheet.create({
     alignItems: "center",
   },
   SubOptionsAlign:{
-    margin:8,
+    marginHorizontal:8,
+    marginTop:4,
     flexDirection: "row",
     alignItems: "center",
   },

@@ -8,6 +8,7 @@ import SplashScreen from "./src/Pages/Splash";
 import CriarProduto from "./src/Pages/CriarProduto";
 import EditarProduto from "./src/Pages/EditarProduto";
 import DeletarProduto from "./src/Pages/DeletarProduto";
+import Estoque from "./src/Pages/Estoque";
 
 
 const Stack = createNativeStackNavigator();
@@ -31,6 +32,7 @@ export default function MainNavigator() {
         <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }} />
         <Stack.Screen name="CriarProduto" component={CriarProduto} />
         <Stack.Screen name="EditarProduto" component={EditarProduto} />
+        <Stack.Screen name="FeedEstoque" component={Estoque} />
         <Stack.Screen name="DeletarProduto" component={DeletarProduto} />
         <Stack.Screen name="DetalhesProduto" component={DetalhesProduto} options={{ headerShown: false }} />
       </Stack.Navigator>
