@@ -134,6 +134,7 @@ const CategoriaStyle = StyleSheet.create({
     marginTop: 20,
     marginBottom: 20,
     marginLeft: 20,
+    marginRight: 20,
     justifyContent: "space-between",
   },
   item: {
@@ -187,7 +188,7 @@ const ProductStyle = StyleSheet.create({
   },
   item: {
     flex: 1,
-    marginLeft: 10,
+    marginLeft: 20,
     marginRight: 10,
     marginBottom: 20,
     maxWidth: 167,
