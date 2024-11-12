@@ -36,8 +36,8 @@ export default function EditarProduto() {
 
   const categorias = [
     { nome: "Mac", imagem: macImage, url: "/mac" },
-    { nome: "Iphone", imagem: iphoneImage, url: "/iphone" },
-    { nome: "Ipad", imagem: ipadImage, url: "/ipad" },
+    { nome: "iPhone", imagem: iphoneImage, url: "/iphone" },
+    { nome: "iPad", imagem: ipadImage, url: "/ipad" },
     { nome: "Watch", imagem: watchImage, url: "/watch" },
   ];
 
@@ -162,11 +162,11 @@ export default function EditarProduto() {
         ))}
       </View>
 
-      <Text style={style.title}>Editar Produto</Text>
+      <Text style={style.title}>Editar Produto:</Text>
 
       {/* Campo de entrada para o ID do produto */}
       <TextInput
-        style={style.input}
+        style={style.inputID}
         placeholder="ID do Produto"
         value={idProduto}
         keyboardType="numeric"
@@ -174,11 +174,13 @@ export default function EditarProduto() {
       />
 
       {/* Buscar produto ao clicar no botão */}
-      <Button
-        title="Buscar Produto"
+      <TouchableOpacity
+        style={[style.buttonStyleID, (loading || !idProduto) && { opacity: 0.7 }]}
         onPress={() => buscarProduto(idProduto)}
         disabled={loading || !idProduto}
-      />
+      >
+        <Text style={style.buttonText}>Buscar Produto</Text>
+      </TouchableOpacity>
 
       {/* Formulário de edição */}
       <View style={style.form}>
@@ -215,7 +217,7 @@ export default function EditarProduto() {
           onChangeText={(text) => handleInputChange("imagem", text)}
         />
 
-        <Text style={style.subTitle}>Cores</Text>
+        <Text style={style.subTitle}>Cores:</Text>
         {produtoEditado.ListaCores.map((cor, index) => (
           <View key={index} style={style.inputGroup}>
             <TextInput
@@ -247,9 +249,11 @@ export default function EditarProduto() {
           </View>
         ))}
 
-        <Button title="Adicionar mais uma cor" onPress={addCor} />
+        <TouchableOpacity style={style.buttonStyle} onPress={addCor}>
+          <Text style={style.buttonText}>Adicionar mais uma cor</Text>
+        </TouchableOpacity>
 
-        <Text style={style.subTitle}>Armazenamentos</Text>
+        <Text style={style.subTitle}>Armazenamentos:</Text>
         {produtoEditado.ListaArmazenamentos.map((armazenamento, index) => (
           <View key={index} style={style.inputGroup}>
             <TextInput
@@ -285,16 +289,20 @@ export default function EditarProduto() {
             />
           </View>
         ))}
-        <Button
-          title="Adicionar mais uma opção de armazenamento"
-          onPress={addArmazenamento}
-        />
 
-        <Button
-          title={loading ? "Carregando..." : "Salvar Alterações"}
+        <TouchableOpacity style={style.buttonStyle} onPress={addArmazenamento}>
+          <Text style={style.buttonText}>Nova opção de armazenamento</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[style.buttonStyleCadastrar, loading && { opacity: 0.7 }]}
           onPress={handleSubmitProduto}
           disabled={loading}
-        />
+        >
+          <Text style={style.buttonText}>
+            {loading ? "Carregando..." : "Salvar Alterações"}
+          </Text>
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
@@ -322,6 +330,7 @@ const style = StyleSheet.create({
   title: {
     paddingLeft: 20,
     fontSize: 16,
+    fontWeight: "bold",
   },
   subTitle: {
     marginTop: 10,
@@ -333,22 +342,62 @@ const style = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: "#ccc",
+    borderColor: "#333",
     padding: 10,
     marginBottom: 10,
-    borderRadius: 5,
+    borderRadius: 12,
   },
   inputGroup: {
     marginBottom: 10,
   },
+  buttonStyle: {
+    backgroundColor: "grey",
+    fontSize: 200,
+    padding: 15,
+    borderRadius: 50,
+    alignItems: "center",
+    marginBottom: 10,
+  },
+  buttonStyleID: {
+    backgroundColor: "grey",
+    fontSize: 200,
+    padding: 15,
+    borderRadius: 50,
+    alignItems: "center",
+    marginBottom: 10,
+    marginHorizontal: 20 
+  },
+  buttonText: {
+    color: "white",
+    fontSize: 16,
+    textTransform: "uppercase",
+  },
+  inputID: {
+    marginHorizontal: 20,
+    borderWidth: 1,
+    borderColor: "#333",
+    padding: 10,
+    marginBottom: 10,
+    borderRadius: 12,
+  },
+  buttonStyleCadastrar: {
+    backgroundColor: "#242424",
+    fontSize: 200,
+    padding: 15,
+    borderRadius: 50,
+    alignItems: "center",
+    marginVertical: 5,
+    marginBottom: 16
+  }
 });
 
 const CategoriaStyle = StyleSheet.create({
   container: {
     flexDirection: "row",
-    marginTop: 20,
+    marginTop: 0,
     marginBottom: 20,
     marginLeft: 20,
+    marginRight: 20,
     justifyContent: "space-between",
   },
   item: {

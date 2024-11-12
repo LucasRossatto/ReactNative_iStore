@@ -36,8 +36,8 @@ export default function CriarProduto() {
 
   const categorias = [
     { nome: "Mac", imagem: macImage, url: "/mac" },
-    { nome: "Iphone", imagem: iphoneImage, url: "/iphone" },
-    { nome: "Ipad", imagem: ipadImage, url: "/ipad" },
+    { nome: "iPhone", imagem: iphoneImage, url: "/iphone" },
+    { nome: "iPad", imagem: ipadImage, url: "/ipad" },
     { nome: "Watch", imagem: watchImage, url: "/watch" },
   ];
 
@@ -135,7 +135,7 @@ export default function CriarProduto() {
         </TouchableOpacity>
       </View>
       <Text style={style.title}>
-        Selecione a categoria do produto para buscar
+        Selecione a categoria do produto para cadastrar:
       </Text>
       {/* View que busca todas as categorias listadas e cria cards correspondentes a elas */}
       <View style={CategoriaStyle.container}>
@@ -166,7 +166,7 @@ export default function CriarProduto() {
           </TouchableOpacity>
         ))}
       </View>
-      <Text style={style.title}>Cadastrar novo Produto</Text>
+      <Text style={style.title}>Cadastrar novo produto:</Text>
       {/* Inicio do form */}
       <View style={style.form}>
         <TextInput
@@ -202,7 +202,7 @@ export default function CriarProduto() {
           onChangeText={(text) => handleInputChange("imagem", text)}
         />
 
-        <Text style={style.subTitle}>Cores</Text>
+        <Text style={style.subTitle}>Cores:</Text>
         {novoProduto.ListaCores.map((cor, index) => (
           <View key={index} style={style.inputGroup}>
             <TextInput
@@ -229,9 +229,11 @@ export default function CriarProduto() {
         ))}
 
         {/* Butao cria mais inputs para adição de cores */}
-        <Button title="Adicionar mais uma cor" onPress={addCor} />
+        <TouchableOpacity style={style.buttonStyle} onPress={addCor}>
+          <Text style={style.buttonText}>Nova opção de cor</Text>
+        </TouchableOpacity>
 
-        <Text style={style.subTitle}>Armazenamentos</Text>
+        <Text style={style.subTitle}>Armazenamentos:</Text>
         {novoProduto.ListaArmazenamentos.map((armazenamento, index) => (
           <View key={index} style={style.inputGroup}>
             <TextInput
@@ -268,14 +270,22 @@ export default function CriarProduto() {
           </View>
         ))}
         {/* Botao cria mais inputs para adição de opções de armazenamento*/}
-        <Button title="Adicionar mais uma opçao de armazenamento" onPress={addArmazenamento} />
+        <TouchableOpacity style={style.buttonStyle} onPress={addArmazenamento}>
+          <Text style={style.buttonText}>
+          Nova opção de armazenamento
+          </Text>
+        </TouchableOpacity>
 
         {/* Botão que envia o produto cadastrado */}
-        <Button
-          title={loading ? "Carregando..." : "Cadastrar Produto"}
+        <TouchableOpacity
+          style={[style.buttonStyleCadastrar, loading && { opacity: 0.7 }]}
           onPress={handleSubmitProduto}
           disabled={loading}
-        />
+        >
+          <Text style={style.buttonText}>
+            {loading ? "Carregando..." : "Cadastrar Produto"}
+          </Text>
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
@@ -303,6 +313,7 @@ const style = StyleSheet.create({
   title: {
     paddingLeft: 20,
     fontSize: 16,
+    fontWeight: "bold",
   },
   subTitle: {
     marginTop: 10,
@@ -314,14 +325,37 @@ const style = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: "#ccc",
+    borderColor: "#333",
     padding: 10,
     marginBottom: 10,
-    borderRadius: 5,
+    borderRadius: 12,
+    marginTop: 5,
   },
   inputGroup: {
     marginBottom: 10,
   },
+  buttonStyle: {
+    backgroundColor: "grey",
+    fontSize: 200,
+    padding: 15,
+    borderRadius: 50,
+    alignItems: "center",
+    marginVertical: 5
+  },
+  buttonText: {
+    color: "white",
+    fontSize: 16,
+    textTransform: "uppercase",
+  },
+  buttonStyleCadastrar: {
+    backgroundColor: "#242424",
+    fontSize: 200,
+    padding: 15,
+    borderRadius: 50,
+    alignItems: "center",
+    marginVertical: 5,
+    marginBottom: 16
+  }
 });
 
 const CategoriaStyle = StyleSheet.create({
@@ -330,6 +364,7 @@ const CategoriaStyle = StyleSheet.create({
     marginTop: 20,
     marginBottom: 20,
     marginLeft: 20,
+    marginRight: 20,
     justifyContent: "space-between",
   },
   item: {

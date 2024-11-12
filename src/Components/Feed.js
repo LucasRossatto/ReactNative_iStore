@@ -23,8 +23,8 @@ export default function Feed() {
 
   const categorias = [
     { nome: "Mac", imagem: macImage, url: "/mac" },
-    { nome: "Iphone", imagem: iphoneImage, url: "/iphone" },
-    { nome: "Ipad", imagem: ipadImage, url: "/ipad" },
+    { nome: "iPhone", imagem: iphoneImage, url: "/iphone" },
+    { nome: "iPad", imagem: ipadImage, url: "/ipad" },
     { nome: "Watch", imagem: watchImage, url: "/watch" },
   ];
 
@@ -134,6 +134,7 @@ const CategoriaStyle = StyleSheet.create({
     marginTop: 20,
     marginBottom: 20,
     marginLeft: 20,
+    marginRight: 20,
     justifyContent: "space-between",
   },
   item: {
@@ -187,7 +188,7 @@ const ProductStyle = StyleSheet.create({
   },
   item: {
     flex: 1,
-    marginLeft: 10,
+    marginLeft: 20,
     marginRight: 10,
     marginBottom: 20,
     maxWidth: 167,

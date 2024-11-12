@@ -3,7 +3,7 @@
     {
       "nome": "MacBook Air",
       "modelo": "M2 2023",
-      "ano": "2022",
+      "ano": "2",
       "preco": 999.99,
       "imagem": "https://i.imgur.com/r2SYLeN.png",
       "ListaCores": [
@@ -119,29 +119,6 @@
         }
       ],
       "id": "1a2d"
-    },
-    {
-      "id": "501a",
-      "nome": "Mac teste",
-      "modelo": "2024 teste",
-      "ano": "2024",
-      "preco": "5",
-      "ListaCores": [
-        {
-          "nomeCor": "preto",
-          "valorCor": "#000"
-        },
-        {
-          "nomeCor": "offwhite",
-          "valorCor": "#F2F2F2"
-        }
-      ],
-      "ListaArmazenamentos": [
-        {
-          "capacidade": "512GB",
-          "preco": "6"
-        }
-      ]
     }
   ],
   "iphone": [
@@ -214,42 +191,6 @@
         }
       ],
       "id": "e53c"
-    },
-    {
-      "id": "254b",
-      "nome": "iPhone 16 Pro Max",
-      "modelo": "Produto do ano",
-      "ano": "2024",
-      "preco": "11999",
-      "ListaCores": [
-        {
-          "nomeCor": "Titaniun ",
-          "valorCor": "#878681"
-        },
-        {
-          "nomeCor": "Product Red",
-          "valorCor": "red"
-        },
-        {
-          "nomeCor": "Preto ",
-          "valorCor": "#000"
-        }
-      ],
-      "ListaArmazenamentos": [
-        {
-          "capacidade": "512GB",
-          "preco": ""
-        },
-        {
-          "capacidade": "1TB",
-          "preco": ""
-        },
-        {
-          "capacidade": "2TB",
-          "preco": ""
-        }
-      ],
-      "imagem": "https://m.media-amazon.com/images/I/515ahREcK+L._AC_SX679_.jpg"
     }
   ],
   "ipad": [
@@ -320,56 +261,5 @@
       "id": "8f0e"
     }
   ],
-  "watch": [
-    {
-      "nome": "relogio",
-      "modelo": "2023",
-      "ano": 2023,
-      "preco": 799.99,
-      "ListaCores": [
-        {
-          "nomeCor": "Titanium Natural",
-          "valorCor": "#D7D7D7"
-        }
-      ],
-      "ListaArmazenamentos": [
-        {
-          "capacidade": "32GB",
-          "preco": 799.99
-        }
-      ],
-      "id": "9e6a"
-    },
-    {
-      "nome": "",
-      "modelo": "2023",
-      "ano": 2023,
-      "preco": 399.99,
-      "ListaCores": [
-        {
-          "nomeCor": "Midnight",
-          "valorCor": "#2E2E3A"
-        },
-        {
-          "nomeCor": "Prateado",
-          "valorCor": "#C0C0C0"
-        },
-        {
-          "nomeCor": "Dourado",
-          "valorCor": "#FFD700"
-        },
-        {
-          "nomeCor": "Product Red",
-          "valorCor": "#FF3B30"
-        }
-      ],
-      "ListaArmazenamentos": [
-        {
-          "capacidade": "32GB",
-          "preco": 399.99
-        }
-      ],
-      "id": "81e8"
-    }
-  ]
+  "watch": []
 }
