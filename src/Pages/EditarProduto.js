@@ -345,7 +345,7 @@ const style = StyleSheet.create({
     borderColor: "#ccc",
     padding: 10,
     marginBottom: 10,
-    borderRadius: 50,
+    borderRadius: 12,
   },
   inputGroup: {
     marginBottom: 10,
@@ -378,7 +378,7 @@ const style = StyleSheet.create({
     borderColor: "#ccc",
     padding: 10,
     marginBottom: 10,
-    borderRadius: 50,
+    borderRadius: 12,
   },
   buttonStyleCadastrar: {
     backgroundColor: "#242424",
