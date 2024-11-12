@@ -328,7 +328,7 @@ const style = StyleSheet.create({
     borderColor: "#333",
     padding: 10,
     marginBottom: 10,
-    borderRadius: 50,
+    borderRadius: 12,
     marginTop: 5,
   },
   inputGroup: {
@@ -353,7 +353,8 @@ const style = StyleSheet.create({
     padding: 15,
     borderRadius: 50,
     alignItems: "center",
-    marginVertical: 5
+    marginVertical: 5,
+    marginBottom: 16
   }
 });
 

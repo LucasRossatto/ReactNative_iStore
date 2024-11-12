@@ -342,7 +342,7 @@ const style = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: "#ccc",
+    borderColor: "#333",
     padding: 10,
     marginBottom: 10,
     borderRadius: 12,
@@ -375,7 +375,7 @@ const style = StyleSheet.create({
   inputID: {
     marginHorizontal: 20,
     borderWidth: 1,
-    borderColor: "#ccc",
+    borderColor: "#333",
     padding: 10,
     marginBottom: 10,
     borderRadius: 12,
@@ -386,7 +386,8 @@ const style = StyleSheet.create({
     padding: 15,
     borderRadius: 50,
     alignItems: "center",
-    marginVertical: 5
+    marginVertical: 5,
+    marginBottom: 16
   }
 });
 
