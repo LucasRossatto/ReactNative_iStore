@@ -24,7 +24,7 @@ export default function DeletarProduto() {
 
   const [categoriaAtiva, setCategoriaAtiva] = useState("/mac");
   const [loading, setLoading] = useState(false);
-  const [produto, setProduto] = useState(null);  // Alterado de produtoEditado para produto
+  const [produto, setProduto] = useState(null); // Alterado de produtoEditado para produto
   const [idProduto, setIdProduto] = useState(""); // Estado para armazenar o ID do produto
 
   const categorias = [
@@ -66,9 +66,7 @@ export default function DeletarProduto() {
     setLoading(true);
     try {
       // A URL depende da categoria ativa e do ID do produto
-      await axios.delete(
-        `http://10.0.2.2:3000${categoriaAtiva}/${idProduto}`
-      );
+      await axios.delete(`http://10.0.2.2:3000${categoriaAtiva}/${idProduto}`);
       alert("Produto deletado com sucesso!");
       navigation.goBack(); // Volta para a tela anterior após deletar
     } catch (err) {
@@ -140,7 +138,10 @@ export default function DeletarProduto() {
 
       {/* Buscar produto ao clicar no botão */}
       <TouchableOpacity
-        style={[style.buttonStyleID, (loading || !idProduto) && { opacity: 0.7 }]}
+        style={[
+          style.buttonStyleID,
+          (loading || !idProduto) && { opacity: 0.7 },
+        ]}
         onPress={() => buscarProduto(idProduto)}
         disabled={loading || !idProduto}
       >
@@ -150,11 +151,39 @@ export default function DeletarProduto() {
       {/* Exibe os detalhes do produto para confirmação de deleção */}
       {produto && (
         <View style={style.form}>
-          <Text style={style.subTitle}>Produto encontrado:</Text>
-          <Text>Nome: {produto.nome}</Text>
-          <Text>Modelo: {produto.modelo}</Text>
-          <Text>Ano: {produto.ano}</Text>
-          <Text>Preço: R$ {produto.preco}</Text>
+          <View style={style.cardDelete}>
+            <View>
+              <Image source={{ uri: produto.imagem }} style={style.image} />
+            </View>
+
+            <View>
+              <View style={style.viewDetalhes}>
+                <Text style={style.titleText}>{produto.nome}</Text>
+                <Text style={style.subTitleText}>{produto.modelo}</Text>
+                <Text>#{produto.id}</Text>
+                <Text>R$ {produto.preco}</Text>
+
+                <View style={ProductStyle.coresView}>
+                  {produto.ListaCores && produto.ListaCores.length > 0 ? (
+                    produto.ListaCores.map((cor, index) => (
+                      <View key={index} style={ProductStyle.optionAlign}>
+                        <View
+                          style={[
+                            ProductStyle.circuloCor,
+                            { backgroundColor: cor.valorCor },
+                          ]}
+                        />
+                      </View>
+                    ))
+                  ) : (
+                    <Text style={ProductStyle.noColors}>
+                      Sem cores disponíveis
+                    </Text>
+                  )}
+                </View>
+              </View>
+            </View>
+          </View>
 
           <TouchableOpacity
             style={[style.buttonStyleCadastrar, loading && { opacity: 0.7 }]}
@@ -191,7 +220,11 @@ const style = StyleSheet.create({
     alignItems: "center",
   },
   title: {
-    paddingLeft: 20,
+    marginLeft: 20,
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  titleText: {
     fontSize: 16,
     fontWeight: "bold",
   },
@@ -200,7 +233,15 @@ const style = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
   },
+  subTitleText: {
+    fontSize: 16,
+    fontWeight: "bold",
+  },
   form: {
+    backgroundColor: "#FFFD",
+    marginHorizontal: 20,
+    borderRadius: 12,
+    marginTop: 15,
     paddingHorizontal: 20,
   },
   inputID: {
@@ -231,6 +272,18 @@ const style = StyleSheet.create({
     color: "white",
     fontSize: 16,
     textTransform: "uppercase",
+  },
+  image: {
+    width: 100,
+    height: 100,
+    resizeMode: "contain",
+  },
+  cardDelete: {
+    paddingVertical: 12,
+    flexDirection: "row",
+  },
+  viewDetalhes: {
+    marginLeft: 20,
   },
 });
 
@@ -271,5 +324,70 @@ const CategoriaStyle = StyleSheet.create({
   textoAtivo: {
     color: "#fff",
     fontWeight: "bold",
+  },
+});
+
+const ProductStyle = StyleSheet.create({
+  DetailBtn: {
+    backgroundColor: "#242424",
+    borderRadius: 50,
+    paddingVertical: 10,
+    marginTop: 8,
+  },
+  BtnText: {
+    color: "#fff",
+    textAlign: "center",
+    fontSize: 12,
+  },
+  item: {
+    marginRight: 10,
+    marginBottom: 20,
+    maxWidth: 167,
+    backgroundColor: "#fff",
+    borderRadius: 13,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 10,
+  },
+  itemNome: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#000",
+    textAlign: "center",
+  },
+  itemAno: {
+    fontSize: 14,
+    fontWeight: "500",
+    color: "#000",
+    textAlign: "center",
+    backgroundColor: "#E0E0E0",
+    padding: 2,
+    paddingHorizontal: 14,
+    borderRadius: 50,
+    margin: 6,
+  },
+  itemImage: {
+    width: 120,
+    height: 71,
+  },
+  coresView: {
+    flexDirection: "row",
+
+    marginBottom: 15,
+  },
+  circuloCor: {
+    width: 10,
+    height: 10,
+    borderRadius: 50,
+  },
+  optionAlign: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginRight: 3,
+  },
+  noColors: {
+    color: "#999",
+    fontSize: 12,
+    textAlign: "center",
   },
 });

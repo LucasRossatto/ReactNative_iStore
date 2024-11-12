@@ -171,7 +171,9 @@ const styles = StyleSheet.create({
     fontSize: 300,
     flex: 2,
     padding: 20,
-    borderRadius: 35,
+    borderTopLeftRadius: 35,
+    borderTopRightRadius: 35,
+    marginBottom: 0,
   },
   detalhesAlign: {
     marginHorizontal: 10,
