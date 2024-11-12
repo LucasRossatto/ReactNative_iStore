@@ -63,6 +63,25 @@ export default function Profile() {
             <Image source={require("../assets/Icons/arrow_rigth.png")} />
           </View>
         </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("DeletarProduto");
+          }}
+        >
+          <View style={style.OptionsAlign}>
+            <View style={style.SubOptionsAlign}>
+              <Image
+                style={style.OptionsIcon}
+                source={require("../assets/Icons/estoque.png")}
+              />
+              <Text style={style.Options}>Deletar produtos do estoque</Text>
+            </View>
+
+            <Image source={require("../assets/Icons/arrow_rigth.png")} />
+          </View>
+        </TouchableOpacity>
+
       </View>
     </View>
   );
