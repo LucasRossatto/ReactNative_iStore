@@ -3,8 +3,8 @@
     {
       "nome": "MacBook Air",
       "modelo": "M2 2023",
-      "ano": "2",
-      "preco": 999.99,
+      "ano": "2024",
+      "preco": "5500",
       "imagem": "https://i.imgur.com/r2SYLeN.png",
       "ListaCores": [
         {
@@ -142,6 +142,34 @@
           "preco": "6"
         }
       ]
+    },
+    {
+      "id": "9c60",
+      "nome": "iPad Pro",
+      "modelo": "Edition F3E",
+      "ano": "2025",
+      "preco": "3998",
+      "ListaCores": [
+        {
+          "nomeCor": "Azul",
+          "valorCor": "blue"
+        },
+        {
+          "nomeCor": "Preto",
+          "valorCor": "black"
+        }
+      ],
+      "ListaArmazenamentos": [
+        {
+          "capacidade": "250GB",
+          "preco": "3998"
+        },
+        {
+          "capacidade": "500GB",
+          "preco": "4398"
+        }
+      ],
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_764857-MLA52988770506_122022-F.webp"
     }
   ],
   "iphone": [

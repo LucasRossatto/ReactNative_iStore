@@ -134,6 +134,7 @@ const CategoriaStyle = StyleSheet.create({
     marginTop: 20,
     marginBottom: 20,
     marginLeft: 20,
+    marginRight: 2,
     justifyContent: "space-between",
   },
   item: {
