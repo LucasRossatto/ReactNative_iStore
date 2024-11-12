@@ -95,6 +95,8 @@ export default function DeletarProduto() {
         </TouchableOpacity>
       </View>
 
+      <Text style={style.title}>Selecione a categoria do produto:</Text>
+
       {/* View que busca todas as categorias listadas e cria cards correspondentes a elas */}
       <View style={CategoriaStyle.container}>
         {categorias.map((categoria, index) => (
@@ -125,7 +127,7 @@ export default function DeletarProduto() {
         ))}
       </View>
 
-      <Text style={style.title}>Deletar Produto:</Text>
+      <Text style={style.title}>Digite o ID do produto:</Text>
 
       {/* Campo de entrada para o ID do produto */}
       <TextInput
@@ -156,31 +158,29 @@ export default function DeletarProduto() {
               <Image source={{ uri: produto.imagem }} style={style.image} />
             </View>
 
-            <View>
-              <View style={style.viewDetalhes}>
-                <Text style={style.titleText}>{produto.nome}</Text>
-                <Text style={style.subTitleText}>{produto.modelo}</Text>
-                <Text>#{produto.id}</Text>
-                <Text>R$ {produto.preco}</Text>
+            <View style={style.viewDetalhes}>
+              <Text style={style.titleText}>{produto.nome}</Text>
+              <Text style={style.subTitleText}>{produto.modelo}</Text>
+              <Text>#{produto.id}</Text>
+              <Text>R$ {produto.preco}</Text>
 
-                <View style={ProductStyle.coresView}>
-                  {produto.ListaCores && produto.ListaCores.length > 0 ? (
-                    produto.ListaCores.map((cor, index) => (
-                      <View key={index} style={ProductStyle.optionAlign}>
-                        <View
-                          style={[
-                            ProductStyle.circuloCor,
-                            { backgroundColor: cor.valorCor },
-                          ]}
-                        />
-                      </View>
-                    ))
-                  ) : (
-                    <Text style={ProductStyle.noColors}>
-                      Sem cores disponíveis
-                    </Text>
-                  )}
-                </View>
+              <View style={ProductStyle.coresView}>
+                {produto.ListaCores && produto.ListaCores.length > 0 ? (
+                  produto.ListaCores.map((cor, index) => (
+                    <View key={index} style={ProductStyle.optionAlign}>
+                      <View
+                        style={[
+                          ProductStyle.circuloCor,
+                          { backgroundColor: cor.valorCor },
+                        ]}
+                      />
+                    </View>
+                  ))
+                ) : (
+                  <Text style={ProductStyle.noColors}>
+                    Sem cores disponíveis
+                  </Text>
+                )}
               </View>
             </View>
           </View>
@@ -191,7 +191,7 @@ export default function DeletarProduto() {
             disabled={loading}
           >
             <Text style={style.buttonText}>
-              {loading ? "Deletando..." : "Confirmar Deleção"}
+              {loading ? "Deletando..." : "DELETAR PARA SEMPRE"}
             </Text>
           </TouchableOpacity>
         </View>
@@ -220,6 +220,7 @@ const style = StyleSheet.create({
     alignItems: "center",
   },
   title: {
+    marginBottom: 8,
     marginLeft: 20,
     fontSize: 16,
     fontWeight: "bold",
@@ -261,11 +262,11 @@ const style = StyleSheet.create({
     marginHorizontal: 20,
   },
   buttonStyleCadastrar: {
-    backgroundColor: "#242424",
+    backgroundColor: "#FF2C2C",
     padding: 15,
     borderRadius: 50,
     alignItems: "center",
-    marginVertical: 5,
+    marginVertical: 0,
     marginBottom: 16,
   },
   buttonText: {
@@ -274,13 +275,14 @@ const style = StyleSheet.create({
     textTransform: "uppercase",
   },
   image: {
-    width: 100,
+    width: 150,
     height: 100,
     resizeMode: "contain",
   },
   cardDelete: {
-    paddingVertical: 12,
+    paddingVertical: 20,
     flexDirection: "row",
+    alignSelf: 'center'
   },
   viewDetalhes: {
     marginLeft: 20,
@@ -376,8 +378,8 @@ const ProductStyle = StyleSheet.create({
     marginBottom: 15,
   },
   circuloCor: {
-    width: 10,
-    height: 10,
+    width: 15,
+    height: 15,
     borderRadius: 50,
   },
   optionAlign: {
