@@ -36,8 +36,8 @@ export default function EditarProduto() {
 
   const categorias = [
     { nome: "Mac", imagem: macImage, url: "/mac" },
-    { nome: "Iphone", imagem: iphoneImage, url: "/iphone" },
-    { nome: "Ipad", imagem: ipadImage, url: "/ipad" },
+    { nome: "iPhone", imagem: iphoneImage, url: "/iphone" },
+    { nome: "iPad", imagem: ipadImage, url: "/ipad" },
     { nome: "Watch", imagem: watchImage, url: "/watch" },
   ];
 
@@ -342,10 +342,10 @@ const style = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: "#ccc",
+    borderColor: "#333",
     padding: 10,
     marginBottom: 10,
-    borderRadius: 50,
+    borderRadius: 12,
   },
   inputGroup: {
     marginBottom: 10,
@@ -375,10 +375,10 @@ const style = StyleSheet.create({
   inputID: {
     marginHorizontal: 20,
     borderWidth: 1,
-    borderColor: "#ccc",
+    borderColor: "#333",
     padding: 10,
     marginBottom: 10,
-    borderRadius: 50,
+    borderRadius: 12,
   },
   buttonStyleCadastrar: {
     backgroundColor: "#242424",
@@ -386,7 +386,8 @@ const style = StyleSheet.create({
     padding: 15,
     borderRadius: 50,
     alignItems: "center",
-    marginVertical: 5
+    marginVertical: 5,
+    marginBottom: 16
   }
 });
 

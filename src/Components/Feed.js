@@ -23,8 +23,8 @@ export default function Feed() {
 
   const categorias = [
     { nome: "Mac", imagem: macImage, url: "/mac" },
-    { nome: "Iphone", imagem: iphoneImage, url: "/iphone" },
-    { nome: "Ipad", imagem: ipadImage, url: "/ipad" },
+    { nome: "iPhone", imagem: iphoneImage, url: "/iphone" },
+    { nome: "iPad", imagem: ipadImage, url: "/ipad" },
     { nome: "Watch", imagem: watchImage, url: "/watch" },
   ];
 
