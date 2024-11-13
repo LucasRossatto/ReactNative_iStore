@@ -57,15 +57,25 @@ export default function Estoque() {
       >
         <View style={ProductStyle.item}>
           {!item.imagem ? (
-            <Text >Imagem indisponível</Text> 
+            <View style={noImage.container}>
+              <Image
+                source={require("../assets/Icons/NoImage.png")}
+                style={noImage.image}
+              />
+              <View>
+                <Text style={noImage.title}>
+                  Este produto não possui imagem cadastrada
+                </Text>
+              </View>
+            </View>
           ) : (
-            <Image source={{ uri: item.imagem }} style={style.image} /> 
+            <Image source={{ uri: item.imagem }} style={style.image} />
           )}
 
           <View style={style.viewDetalhes}>
             <Text style={style.titleText}>{item.nome}</Text>
             <Text style={style.subTitleText}>{item.modelo}</Text>
-            <Text>#{item.id}</Text>
+            <Text>id: {item.id}</Text>
             <Text>R$ {item.preco}</Text>
 
             <View style={ProductStyle.coresView}>
@@ -353,4 +363,23 @@ const style = StyleSheet.create({
   viewDetalhes: {
     marginLeft: 20,
   },
+});
+
+const noImage = StyleSheet.create({
+  container: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal:8,
+    maxWidth:112,
+  },
+  image: {
+    width: 36,
+    height: 36,
+    resizeMode: "contain",
+  },
+  title: {
+    fontSize:12,
+    fontWeight:"bold",
+  },
+  
 });

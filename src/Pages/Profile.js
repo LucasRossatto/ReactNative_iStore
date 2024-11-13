@@ -55,7 +55,8 @@ export default function Profile() {
             <View style={style.SubOptionsAlign}>
               <Image
                 style={style.OptionsIcon}
-                source={require("../assets/Icons/estoque.png")}
+                tintColor={"#AEAEAE"}
+                source={require("../assets/Icons/edit2.png")}
               />
               <Text style={style.Options}>Editar produtos do estoque</Text>
             </View>
@@ -73,7 +74,8 @@ export default function Profile() {
             <View style={style.SubOptionsAlign}>
               <Image
                 style={style.OptionsIcon}
-                source={require("../assets/Icons/estoque.png")}
+                tintColor={"#AEAEAE"}
+                source={require("../assets/Icons/trash.png")}
               />
               <Text style={style.Options}>Deletar produtos do estoque</Text>
             </View>
@@ -81,7 +83,6 @@ export default function Profile() {
             <Image source={require("../assets/Icons/arrow_rigth.png")} />
           </View>
         </TouchableOpacity>
-
 
         <TouchableOpacity
           onPress={() => {
@@ -92,7 +93,8 @@ export default function Profile() {
             <View style={style.SubOptionsAlign}>
               <Image
                 style={style.OptionsIcon}
-                source={require("../assets/Icons/estoque.png")}
+                tintColor={"#AEAEAE"}
+                source={require("../assets/Icons/search.png")}
               />
               <Text style={style.Options}>Vizualizar produtos do estoque</Text>
             </View>
@@ -100,7 +102,6 @@ export default function Profile() {
             <Image source={require("../assets/Icons/arrow_rigth.png")} />
           </View>
         </TouchableOpacity>
-
       </View>
     </View>
   );
@@ -158,9 +159,9 @@ const style = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
   },
-  SubOptionsAlign:{
-    marginHorizontal:8,
-    marginTop:4,
+  SubOptionsAlign: {
+    marginHorizontal: 8,
+    marginTop: 4,
     flexDirection: "row",
     alignItems: "center",
   },
