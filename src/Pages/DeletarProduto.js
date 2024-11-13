@@ -153,6 +153,9 @@ export default function DeletarProduto() {
       {/* Exibe os detalhes do produto para confirmação de deleção */}
       {produto && (
         <View style={style.form}>
+          <View style={style.alert}>
+            <Text style={style.textAlert}>Cuidado, esta ação é irreversível</Text>
+          </View>
           <View style={style.cardDelete}>
             <View>
               <Image source={{ uri: produto.imagem }} style={style.image} />
@@ -186,7 +189,7 @@ export default function DeletarProduto() {
           </View>
 
           <TouchableOpacity
-            style={[style.buttonStyleCadastrar, loading && { opacity: 0.7 }]}
+            style={[style.buttonStyleDeletar, loading && { opacity: 0.7 }]}
             onPress={handleDeleteProduto}
             disabled={loading}
           >
@@ -243,7 +246,6 @@ const style = StyleSheet.create({
     marginHorizontal: 20,
     borderRadius: 12,
     marginTop: 15,
-    paddingHorizontal: 20,
   },
   inputID: {
     marginHorizontal: 20,
@@ -261,12 +263,13 @@ const style = StyleSheet.create({
     marginBottom: 10,
     marginHorizontal: 20,
   },
-  buttonStyleCadastrar: {
+  buttonStyleDeletar: {
     backgroundColor: "#FF2C2C",
     padding: 15,
     borderRadius: 50,
     alignItems: "center",
     marginVertical: 0,
+    marginHorizontal: 20,
     marginBottom: 16,
   },
   buttonText: {
@@ -282,11 +285,24 @@ const style = StyleSheet.create({
   cardDelete: {
     paddingVertical: 20,
     flexDirection: "row",
-    alignSelf: 'center'
+    alignSelf: "center",
   },
   viewDetalhes: {
     marginLeft: 20,
   },
+  alert: {
+    backgroundColor: "#242424",
+    borderTopEndRadius: 12,
+    borderTopLeftRadius: 12
+  },
+  textAlert: {
+    color: "#f2f2f2",
+    textTransform: "uppercase",
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 12,
+    padding: 8
+  }
 });
 
 const CategoriaStyle = StyleSheet.create({
