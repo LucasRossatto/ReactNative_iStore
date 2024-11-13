@@ -156,41 +156,6 @@
         }
       ],
       "id": "8cc8"
-    },
-    {
-      "nome": "iPhone 14",
-      "modelo": "Pro 2022",
-      "ano": "2022",
-      "preco": 1099.99,
-      "ListaCores": [
-        {
-          "nomeCor": "Roxo Profundo",
-          "valorCor": "#5A3E91"
-        },
-        {
-          "nomeCor": "Dourado",
-          "valorCor": "#FFD700"
-        },
-        {
-          "nomeCor": "Prateado",
-          "valorCor": "#C0C0C0"
-        },
-        {
-          "nomeCor": "Grafite",
-          "valorCor": "#4A4A4A"
-        }
-      ],
-      "ListaArmazenamentos": [
-        {
-          "capacidade": "128GB",
-          "preco": "12000"
-        },
-        {
-          "capacidade": "256GB",
-          "preco": "13000"
-        }
-      ],
-      "id": "e53c"
     }
   ],
   "ipad": [
@@ -224,41 +189,6 @@
         }
       ],
       "id": "fa64"
-    },
-    {
-      "nome": "iPad Air",
-      "modelo": "5ª geração, 2022",
-      "ano": 2022,
-      "preco": 599.99,
-      "ListaCores": [
-        {
-          "nomeCor": "Cinza Espacial",
-          "valorCor": "#1D1F20"
-        },
-        {
-          "nomeCor": "Prateado",
-          "valorCor": "#C0C0C0"
-        },
-        {
-          "nomeCor": "Rosa",
-          "valorCor": "#FFC0CB"
-        },
-        {
-          "nomeCor": "Roxo",
-          "valorCor": "#8A2BE2"
-        }
-      ],
-      "ListaArmazenamentos": [
-        {
-          "capacidade": "64GB",
-          "preco": 599.99
-        },
-        {
-          "capacidade": "256GB",
-          "preco": 749.99
-        }
-      ],
-      "id": "8f0e"
     }
   ],
   "watch": []

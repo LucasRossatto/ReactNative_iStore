@@ -12,6 +12,8 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
+import style from '../assets/styles/DeletarProdutoStyle'; // Importando o estilo
+import ProductStyle  from '../assets/styles/DeletarProdutoStyle'; // Importando o estilo
 
 // Icons das categorias
 import macImage from "../assets/Icons/mac.png";
@@ -95,6 +97,8 @@ export default function DeletarProduto() {
         </TouchableOpacity>
       </View>
 
+      <Text style={style.title}>Selecione a categoria do produto:</Text>
+
       {/* View que busca todas as categorias listadas e cria cards correspondentes a elas */}
       <View style={CategoriaStyle.container}>
         {categorias.map((categoria, index) => (
@@ -125,7 +129,7 @@ export default function DeletarProduto() {
         ))}
       </View>
 
-      <Text style={style.title}>Deletar Produto:</Text>
+      <Text style={style.title}>Digite o ID do produto:</Text>
 
       {/* Campo de entrada para o ID do produto */}
       <TextInput
@@ -151,47 +155,48 @@ export default function DeletarProduto() {
       {/* Exibe os detalhes do produto para confirmação de deleção */}
       {produto && (
         <View style={style.form}>
+          <View style={style.alert}>
+            <Text style={style.textAlert}>Cuidado, esta ação é irreversível</Text>
+          </View>
           <View style={style.cardDelete}>
             <View>
               <Image source={{ uri: produto.imagem }} style={style.image} />
             </View>
 
-            <View>
-              <View style={style.viewDetalhes}>
-                <Text style={style.titleText}>{produto.nome}</Text>
-                <Text style={style.subTitleText}>{produto.modelo}</Text>
-                <Text>#{produto.id}</Text>
-                <Text>R$ {produto.preco}</Text>
+            <View style={style.viewDetalhes}>
+              <Text style={style.titleText}>{produto.nome}</Text>
+              <Text style={style.subTitleText}>{produto.modelo}</Text>
+              <Text>#{produto.id}</Text>
+              <Text>R$ {produto.preco}</Text>
 
-                <View style={ProductStyle.coresView}>
-                  {produto.ListaCores && produto.ListaCores.length > 0 ? (
-                    produto.ListaCores.map((cor, index) => (
-                      <View key={index} style={ProductStyle.optionAlign}>
-                        <View
-                          style={[
-                            ProductStyle.circuloCor,
-                            { backgroundColor: cor.valorCor },
-                          ]}
-                        />
-                      </View>
-                    ))
-                  ) : (
-                    <Text style={ProductStyle.noColors}>
-                      Sem cores disponíveis
-                    </Text>
-                  )}
-                </View>
+              <View style={ProductStyle.coresView}>
+                {produto.ListaCores && produto.ListaCores.length > 0 ? (
+                  produto.ListaCores.map((cor, index) => (
+                    <View key={index} style={ProductStyle.optionAlign}>
+                      <View
+                        style={[
+                          ProductStyle.circuloCor,
+                          { backgroundColor: cor.valorCor },
+                        ]}
+                      />
+                    </View>
+                  ))
+                ) : (
+                  <Text style={ProductStyle.noColors}>
+                    Sem cores disponíveis
+                  </Text>
+                )}
               </View>
             </View>
           </View>
 
           <TouchableOpacity
-            style={[style.buttonStyleCadastrar, loading && { opacity: 0.7 }]}
+            style={[style.buttonStyleDeletar, loading && { opacity: 0.7 }]}
             onPress={handleDeleteProduto}
             disabled={loading}
           >
             <Text style={style.buttonText}>
-              {loading ? "Deletando..." : "Confirmar Deleção"}
+              {loading ? "Deletando..." : "DELETAR PARA SEMPRE"}
             </Text>
           </TouchableOpacity>
         </View>
@@ -199,93 +204,6 @@ export default function DeletarProduto() {
     </ScrollView>
   );
 }
-
-const style = StyleSheet.create({
-  body: {
-    backgroundColor: "#F0F0F0",
-    flex: 1,
-    display: "flex",
-  },
-  top: {
-    paddingHorizontal: 10,
-    gap: 16,
-    marginHorizontal: 10,
-    paddingBottom: 36,
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  loadingContainer: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  title: {
-    marginLeft: 20,
-    fontSize: 16,
-    fontWeight: "bold",
-  },
-  titleText: {
-    fontSize: 16,
-    fontWeight: "bold",
-  },
-  subTitle: {
-    marginTop: 10,
-    fontSize: 16,
-    fontWeight: "bold",
-  },
-  subTitleText: {
-    fontSize: 16,
-    fontWeight: "bold",
-  },
-  form: {
-    backgroundColor: "#FFFD",
-    marginHorizontal: 20,
-    borderRadius: 12,
-    marginTop: 15,
-    paddingHorizontal: 20,
-  },
-  inputID: {
-    marginHorizontal: 20,
-    borderWidth: 1,
-    borderColor: "#333",
-    padding: 10,
-    marginBottom: 10,
-    borderRadius: 12,
-  },
-  buttonStyleID: {
-    backgroundColor: "grey",
-    padding: 15,
-    borderRadius: 50,
-    alignItems: "center",
-    marginBottom: 10,
-    marginHorizontal: 20,
-  },
-  buttonStyleCadastrar: {
-    backgroundColor: "#242424",
-    padding: 15,
-    borderRadius: 50,
-    alignItems: "center",
-    marginVertical: 5,
-    marginBottom: 16,
-  },
-  buttonText: {
-    color: "white",
-    fontSize: 16,
-    textTransform: "uppercase",
-  },
-  image: {
-    width: 100,
-    height: 100,
-    resizeMode: "contain",
-  },
-  cardDelete: {
-    paddingVertical: 12,
-    flexDirection: "row",
-  },
-  viewDetalhes: {
-    marginLeft: 20,
-  },
-});
 
 const CategoriaStyle = StyleSheet.create({
   container: {
@@ -324,70 +242,5 @@ const CategoriaStyle = StyleSheet.create({
   textoAtivo: {
     color: "#fff",
     fontWeight: "bold",
-  },
-});
-
-const ProductStyle = StyleSheet.create({
-  DetailBtn: {
-    backgroundColor: "#242424",
-    borderRadius: 50,
-    paddingVertical: 10,
-    marginTop: 8,
-  },
-  BtnText: {
-    color: "#fff",
-    textAlign: "center",
-    fontSize: 12,
-  },
-  item: {
-    marginRight: 10,
-    marginBottom: 20,
-    maxWidth: 167,
-    backgroundColor: "#fff",
-    borderRadius: 13,
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 10,
-  },
-  itemNome: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "#000",
-    textAlign: "center",
-  },
-  itemAno: {
-    fontSize: 14,
-    fontWeight: "500",
-    color: "#000",
-    textAlign: "center",
-    backgroundColor: "#E0E0E0",
-    padding: 2,
-    paddingHorizontal: 14,
-    borderRadius: 50,
-    margin: 6,
-  },
-  itemImage: {
-    width: 120,
-    height: 71,
-  },
-  coresView: {
-    flexDirection: "row",
-
-    marginBottom: 15,
-  },
-  circuloCor: {
-    width: 10,
-    height: 10,
-    borderRadius: 50,
-  },
-  optionAlign: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginRight: 3,
-  },
-  noColors: {
-    color: "#999",
-    fontSize: 12,
-    textAlign: "center",
   },
 });

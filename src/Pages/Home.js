@@ -20,4 +20,3 @@ const style = StyleSheet.create({
     display: "flex",
   },
 });
-
