@@ -160,7 +160,23 @@ export default function DeletarProduto() {
           </View>
           <View style={style.cardDelete}>
             <View>
-              <Image source={{ uri: produto.imagem }} style={style.image} />
+
+            {!produto.imagem ? (
+            <View style={noImage.container}>
+              <Image
+                source={require("../assets/Icons/NoImage.png")}
+                style={noImage.image}
+              />
+              <View>
+                <Text style={noImage.title}>
+                  Este produto não possui imagem cadastrada
+                </Text>
+              </View>
+            </View>
+          ) : (
+            <Image source={{ uri: produto.imagem }} style={style.image} />
+          )}
+
             </View>
 
             <View style={style.viewDetalhes}>
@@ -243,4 +259,25 @@ const CategoriaStyle = StyleSheet.create({
     color: "#fff",
     fontWeight: "bold",
   },
+});
+
+
+const noImage = StyleSheet.create({
+  container: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal:8,
+    maxWidth:112,
+  },
+  image: {
+    width: 36,
+    height: 36,
+    resizeMode: "contain",
+  },
+  title: {
+    fontSize:12,
+    fontWeight:"bold",
+    textAlign:"center"
+  },
+  
 });

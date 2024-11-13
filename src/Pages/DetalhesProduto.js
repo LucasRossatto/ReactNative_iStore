@@ -44,7 +44,23 @@ export default function DetalhesProduto({ route }) {
         </View>
 
         <View style={styles.circle}>
-          <Image style={styles.image} source={{ uri: item.imagem }} />
+
+          {!item.imagem ? (
+            <View style={noImage.container}>
+              <Image
+                source={require("../assets/Icons/NoImage.png")}
+                style={noImage.image}
+              />
+              <View>
+                <Text style={noImage.title}>
+                  Este produto não possui imagem cadastrada
+                </Text>
+              </View>
+            </View>
+          ) : (
+            <Image style={styles.image} source={{ uri: item.imagem }} />
+          )}
+
         </View>
         <View style={styles.detalhes}>
           <View style={styles.detalhesAlign}>
@@ -229,5 +245,25 @@ const styles = StyleSheet.create({
   },
   nomeCor: {
     fontSize: 14,
+  },
+});
+
+
+const noImage = StyleSheet.create({
+  container: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal:8,
+    maxWidth:112,
+  },
+  image: {
+    width: 76,
+    height: 76,
+    resizeMode: "contain",
+  },
+  title: {
+    fontSize:16,
+    fontWeight:"bold",
+    textAlign:"center"
   },
 });

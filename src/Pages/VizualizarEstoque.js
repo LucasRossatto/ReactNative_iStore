@@ -38,7 +38,7 @@ export default function Estoque() {
       })
       .catch((error) => {
         console.error("Erro ao buscar produtos", error);
-        setLoading(false);
+        setLoading(true);
       });
   };
 
@@ -380,6 +380,7 @@ const noImage = StyleSheet.create({
   title: {
     fontSize:12,
     fontWeight:"bold",
+    textAlign:"center"
   },
   
 });
