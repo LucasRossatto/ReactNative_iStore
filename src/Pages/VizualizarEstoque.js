@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   Image,
+  Alert,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
@@ -30,15 +31,37 @@ export default function Estoque() {
 
   const listarProdutos = (categoriaUrl) => {
     setLoading(true);
+  
     axios
       .get(`http://10.0.2.2:3000${categoriaUrl}`)
       .then((response) => {
-        setProdutos(response.data);
+        if (response.data && Array.isArray(response.data)) {
+          // Verifica se a resposta contém dados e se é um array válido
+          const produtosValidos = response.data.map((produto) => {
+            // Valida cada produto antes de usá-lo
+            if (produto) {
+              return produto;
+            } else {
+              // Caso algum item tenha propriedades nulas ou indefinidas
+              console.warn('Produto com dados inválidos encontrado:', produto);
+              return null; 
+            }
+          }).filter(Boolean); 
+          // Se a categoria for encontrado  e não haver produto retorna um alerta
+          if (produtosValidos.length > 0) {
+            setProdutos(produtosValidos);
+          } else {
+            Alert.alert("Nenhum produto encontrado"),
+            console.warn("Nenhum produto encontrado"),
+            setProdutos([]);
+          }
+        } 
         setLoading(false);
       })
       .catch((error) => {
-        console.error("Erro ao buscar produtos", error);
-        setLoading(true);
+        console.error('Erro ao buscar produtos', error);
+        setProdutos([]); 
+        setLoading(false);
       });
   };
 
