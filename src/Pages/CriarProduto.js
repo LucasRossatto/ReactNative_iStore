@@ -12,7 +12,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
-import style from '../assets/styles/CriarProdutoStyle'; // Importando o estilo
+import style from "../assets/styles/CriarProdutoStyle"; // Importando o estilo
 
 // Icons das categorias
 import macImage from "../assets/Icons/mac.png";
@@ -272,9 +272,7 @@ export default function CriarProduto() {
         ))}
         {/* Botao cria mais inputs para adição de opções de armazenamento*/}
         <TouchableOpacity style={style.buttonStyle} onPress={addArmazenamento}>
-          <Text style={style.buttonText}>
-          Nova opção de armazenamento
-          </Text>
+          <Text style={style.buttonText}>Nova opção de armazenamento</Text>
         </TouchableOpacity>
 
         {/* Botão que envia o produto cadastrado */}

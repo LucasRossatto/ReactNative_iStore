@@ -44,7 +44,6 @@ export default function DetalhesProduto({ route }) {
         </View>
 
         <View style={styles.circle}>
-
           {!item.imagem ? (
             <View style={noImage.container}>
               <Image
@@ -60,7 +59,6 @@ export default function DetalhesProduto({ route }) {
           ) : (
             <Image style={styles.image} source={{ uri: item.imagem }} />
           )}
-
         </View>
         <View style={styles.detalhes}>
           <View style={styles.detalhesAlign}>
@@ -248,13 +246,12 @@ const styles = StyleSheet.create({
   },
 });
 
-
 const noImage = StyleSheet.create({
   container: {
     alignItems: "center",
     justifyContent: "center",
-    paddingHorizontal:8,
-    maxWidth:112,
+    paddingHorizontal: 8,
+    maxWidth: 112,
   },
   image: {
     width: 76,
@@ -262,8 +259,8 @@ const noImage = StyleSheet.create({
     resizeMode: "contain",
   },
   title: {
-    fontSize:16,
-    fontWeight:"bold",
-    textAlign:"center"
+    fontSize: 16,
+    fontWeight: "bold",
+    textAlign: "center",
   },
 });

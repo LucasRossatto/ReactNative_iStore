@@ -12,8 +12,8 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
-import style from '../assets/styles/DeletarProdutoStyle'; // Importando o estilo
-import ProductStyle  from '../assets/styles/DeletarProdutoStyle'; // Importando o estilo
+import style from "../assets/styles/DeletarProdutoStyle"; // Importando o estilo
+import ProductStyle from "../assets/styles/DeletarProdutoStyle"; // Importando o estilo
 
 // Icons das categorias
 import macImage from "../assets/Icons/mac.png";
@@ -156,27 +156,27 @@ export default function DeletarProduto() {
       {produto && (
         <View style={style.form}>
           <View style={style.alert}>
-            <Text style={style.textAlert}>Cuidado, esta ação é irreversível</Text>
+            <Text style={style.textAlert}>
+              Cuidado, esta ação é irreversível
+            </Text>
           </View>
           <View style={style.cardDelete}>
             <View>
-
-            {!produto.imagem ? (
-            <View style={noImage.container}>
-              <Image
-                source={require("../assets/Icons/NoImage.png")}
-                style={noImage.image}
-              />
-              <View>
-                <Text style={noImage.title}>
-                  Este produto não possui imagem cadastrada
-                </Text>
-              </View>
-            </View>
-          ) : (
-            <Image source={{ uri: produto.imagem }} style={style.image} />
-          )}
-
+              {!produto.imagem ? (
+                <View style={noImage.container}>
+                  <Image
+                    source={require("../assets/Icons/NoImage.png")}
+                    style={noImage.image}
+                  />
+                  <View>
+                    <Text style={noImage.title}>
+                      Este produto não possui imagem cadastrada
+                    </Text>
+                  </View>
+                </View>
+              ) : (
+                <Image source={{ uri: produto.imagem }} style={style.image} />
+              )}
             </View>
 
             <View style={style.viewDetalhes}>
@@ -261,13 +261,12 @@ const CategoriaStyle = StyleSheet.create({
   },
 });
 
-
 const noImage = StyleSheet.create({
   container: {
     alignItems: "center",
     justifyContent: "center",
-    paddingHorizontal:8,
-    maxWidth:112,
+    paddingHorizontal: 8,
+    maxWidth: 112,
   },
   image: {
     width: 36,
@@ -275,9 +274,8 @@ const noImage = StyleSheet.create({
     resizeMode: "contain",
   },
   title: {
-    fontSize:12,
-    fontWeight:"bold",
-    textAlign:"center"
+    fontSize: 12,
+    fontWeight: "bold",
+    textAlign: "center",
   },
-  
 });

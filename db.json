@@ -3,9 +3,9 @@
     {
       "nome": "MacBook Air",
       "modelo": "M2 2023",
-      "ano": "2",
+      "ano": 2023,
       "preco": 999.99,
-      "imagem": "https://i.imgur.com/r2SYLeN.png",
+      "imagem": "data:image/webp;base64,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",
       "ListaCores": [
         {
           "nomeCor": "Cinza Espacial",
@@ -37,7 +37,7 @@
       "modelo": "14 polegadas, M2 Pro 2023",
       "ano": 2023,
       "preco": 1999.99,
-      "imagem": "https://i.imgur.com/r2SYLeN.png",
+      "imagem": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAFwAXAMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABwECAwQIBQb/xABEEAABAwMAAgoNCwUBAAAAAAABAAIDBAURBhIHExchMUGSsdHSCBQVMjVRVWFxc5GT4SRCRFNjgYKDlKGyRVKiwfAj/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEh/9oADAMBAAIRAxEAPwCcUREBERAREQEREBERAREQF8npzp9bNC30kdfTVdRLVBzmMpmtOA3GSckeML6xQZ2RVQaa7WN7QDmnmG+M/OYg93d0sPki78iPrqu7pYvI935EfXUCi8SD5kfuwsjbxOe9jYfREFcE7buli8j3fkR9dWnZ3sAODaLv7uPrqDe69VxQs9yE7sVX1LPchBOW7tYMZ7kXf3cfXVp2e9HRvG13bkR9dQjFdaqSVrdojdv8BiG+q6QwwdtR7VFtTiG67M8BISCbRs86PHfFqux/BH11Vuz1o2XgOtt1aCd86ke9/mocu0tPbI6akp4GFzog+SRwySTxD/uNeJcYBG5rgMB7dYD2j/SQdqRSNljZIw5a9oc0+MFXLWtvg6l9SzmC2VAUC9kt4RsXqZudqnpQX2RbQ+9aPA8G1S87UEaWq0UdPQm5XmQshBw1gGXPPiA4yqT6Q0veUdshjYOAyuLnH2YwtS/zuqa+OnBxFC0RsH3ZJ9vMF6VRPabPBDB2p21VOYHSEv1WszwDgOStI0Deyfo1PyHdKxm8E/RoOS7pWyb1Qu/pkQ/MPQsTrpRngoYx+M9CKxsvcsLtaKCnDuImMnH7rSdUy1NUJJnl73P1nOPGV6EdfRveGmiGD/a/f5lS9UlPTVcTqUnUcAcOGCMqDJpI7WrID9jGsV+A2uiLeA0/76zvgsd8k2yaIj6lqwurdtpRDKAS0HVPiyg7Mtvg6l9SzmC2VrW3wdS+pZzBbKgKDOyJOLzYD9jN/JqnNQX2Rnhewepm/k1BEFY7NwLvG8lUup2ysc7jdq/xAVtUflf4lSuP/oD6OZUeuI7TbaSHtmOSeolbrENIAaPOVgfXWw95RvH5g6FZTV1FLTCKvhe5ze9kZjOPEQVae5Z70S/e0dKoyRXKhgeJG0Re4cAMmBzLzq6ulrah00uNZzs4aMAeYeZbhbbeLbOSOlWltBxa3JHSoMIqIpGN21uS0Y4eJUklpyxwbEQcbxysxbQ8WtyQscgpNrdq51sHG9xoOy7b4OpfUs5gtla1t8HUvqWcwWyoPB0tvF0s1LDLabLLdXvcWujicQW8G/vA+f2KHdPxftOq6hdLo1c6OSka+MMZC5+tkgnfIGOBdAIg5b3Ob045dabvnx9rfFVdscXl3fWm7n003xXUaIOWxsbXbIzaLv5/kvxWXc2rvJV9/Rt6y6fRBy8/Y2uW9tdpveePWpB0qzc2u/ki7/pfiupEQctbm148kXb9L8ViqNju8RRl7rPdg0cfaucewrqpEEcWjTbSWU01M3QqtEQxEZXlzQMDhOW+hSOiICIiAiIgIiICIiAiIgIiIP/Z",
       "ListaCores": [
         {
           "nomeCor": "Cinza Espacial",
@@ -65,7 +65,7 @@
       "modelo": "24 polegadas, M1 2021",
       "ano": 2021,
       "preco": 1299.99,
-      "imagem": "https://i.imgur.com/r2SYLeN.png",
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSLn6rzATRKK_vslX6jKZuFokfJvs639XUb72UwuNwBTg7r5KSplw_mGAn9dEdJ6v0H4-FWcUSeBomj0AsRTctTefMIpf7D4S1obiXGZw8K1NWpwoxF3oEYuG_-sB0Z36EK50UdHzQ&usqp=CAc",
       "ListaCores": [
         {
           "nomeCor": "Azul",
@@ -101,7 +101,7 @@
       "modelo": "M2 2023",
       "ano": 2023,
       "preco": 699.99,
-      "imagem": "https://i.imgur.com/r2SYLeN.png",
+      "imagem": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR8c0fR1nQaANkwmse4ZFALWViPYMHanz_1yHgXOth8PlMbt4JVhVCiaiBmUrIvOUlwg5W7KEcqr4R44k7ax5vjqX9l1hrsJk1RwJ9fnE0o8VAWm7HCd34buZWc&usqp=CAc",
       "ListaCores": [
         {
           "nomeCor": "Prateado",
@@ -119,6 +119,102 @@
         }
       ],
       "id": "1a2d"
+    },
+    {
+      "nome": "Mac Studio",
+      "modelo": "M2 Ultra 2023",
+      "ano": 2023,
+      "preco": 3999.99,
+      "imagem": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRvDUrg7dZP4_r1sSy2fqmwaJSSKmdaj-46A3CAVC-YBNgEMwH25LQxfoVD1S34w6_7G09q9PosIlzTGn3zxS2cwzCUg-ypTx94fahbOLKljGt9AKffjTO9uU8&usqp=CAE",
+      "ListaCores": [
+        {
+          "nomeCor": "Prateado",
+          "valorCor": "#C0C0C0"
+        }
+      ],
+      "ListaArmazenamentos": [
+        {
+          "capacidade": "1TB",
+          "preco": 3999.99
+        },
+        {
+          "capacidade": "2TB",
+          "preco": 4999.99
+        }
+      ],
+      "id": "5e67"
+    },
+    {
+      "nome": "Mac Pro",
+      "modelo": "M2 Ultra 2023",
+      "ano": 2023,
+      "preco": 6999.99,
+      "imagem": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTem48uCWMvMR7nlKno5xzDfF_Yfs290MYjDAa3ys0bJpG-40Bs38js901QQ7vMO1ywR5q9-5bAuTy9CgedrlLqqUhOwA1IhKQDPgLLFkNObkZjXSxqF9Efiw&usqp=CAE",
+      "ListaCores": [
+        {
+          "nomeCor": "Prateado",
+          "valorCor": "#C0C0C0"
+        }
+      ],
+      "ListaArmazenamentos": [
+        {
+          "capacidade": "1TB",
+          "preco": 6999.99
+        },
+        {
+          "capacidade": "4TB",
+          "preco": 8999.99
+        }
+      ],
+      "id": "9f4a"
+    },
+    {
+      "nome": "MacBook Pro",
+      "modelo": "16 polegadas, M2 Max",
+      "ano": 2023,
+      "preco": 3499.99,
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSKM_MSYw8wwn7sLGcADySQ1GUbwrm8VWrLR_1JivPSs5AiYfhU9omNk2LexMOIWOv1WOcnRvgiNK_C89y1e9fo7oth8FxWNQ8E6NB19MHh7FsgcvMUERcWxIQ-Rhx7ODxcsiz-RiQfcA&usqp=CAc",
+      "ListaCores": [
+        {
+          "nomeCor": "Cinza Espacial",
+          "valorCor": "#1D1F20"
+        }
+      ],
+      "ListaArmazenamentos": [
+        {
+          "capacidade": "512GB",
+          "preco": 3499.99
+        },
+        {
+          "capacidade": "1TB",
+          "preco": 3999.99
+        }
+      ],
+      "id": "bf8d"
+    },
+    {
+      "nome": "iMac Pro",
+      "modelo": "27 polegadas, M1 Max",
+      "ano": 2021,
+      "preco": 4999.99,
+      "imagem": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS3NyWygLwdLBtKpGgT7FDJM7aq0mwfd-S26L6Kh06aOhtK_9zfk-QD1cG2HF6PEa6ClOr5Qmr-BoOqQf-wniz-nVf-kTIUd_OIlI_Ccl9a9lzCgyHUja5O&usqp=CAE",
+      "ListaCores": [
+        {
+          "nomeCor": "Cinza Espacial",
+          "valorCor": "#1D1F20"
+        }
+      ],
+      "ListaArmazenamentos": [
+        {
+          "capacidade": "1TB",
+          "preco": 4999.99
+        },
+        {
+          "capacidade": "2TB",
+          "preco": 5999.99
+        }
+      ],
+      "id": "4fa1"
     }
   ],
   "iphone": [
@@ -127,6 +223,7 @@
       "modelo": "Pro Max 2023",
       "ano": 2023,
       "preco": 1399.99,
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSKWtnYdAOfAItjxysSYahyPHWfatGvb6epXd70LbFL8t_Jjikd-ZNKrnKfYvhx2yfBSDI8naylp3YrT97fowcBuo349fgLW6O7PgvcRNI&usqp=CAE",
       "ListaCores": [
         {
           "nomeCor": "Titanium Natural",
@@ -156,40 +253,290 @@
         }
       ],
       "id": "8cc8"
-    }
-  ],
-  "ipad": [
+    },
     {
-      "nome": "iPad Pro",
-      "modelo": "12.9 polegadas, M2 2023",
-      "ano": 2023,
-      "preco": 1199.99,
+      "nome": "iPhone 14",
+      "modelo": "Pro Max 2022",
+      "ano": 2022,
+      "preco": 1299.99,
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTYZdnAIx4xCnN6FZxIZlPAawGcbuwNXggdrp3iVBFCUW_f0ayUrec3CjYWB1kk0sQdJPGtuFwmW-_9W9mXlDhnrZ8svizSt0VvctHIhMUBkZUcfg-hlJoDNNej_hiUSrMZ5aXjng&usqp=CAc",
       "ListaCores": [
         {
-          "nomeCor": "Cinza Espacial",
-          "valorCor": "#1D1F20"
+          "nomeCor": "Preto Espacial",
+          "valorCor": "#000000"
         },
         {
-          "nomeCor": "Prateado",
-          "valorCor": "#C0C0C0"
+          "nomeCor": "Dourado",
+          "valorCor": "#FFD700"
         }
       ],
       "ListaArmazenamentos": [
         {
           "capacidade": "128GB",
-          "preco": 1199.99
+          "preco": 1299.99
         },
         {
           "capacidade": "256GB",
-          "preco": 1349.99
-        },
-        {
-          "capacidade": "512GB",
-          "preco": 1499.99
+          "preco": 1399.99
         }
       ],
-      "id": "fa64"
+      "id": "8f9b"
+    },
+    {
+      "nome": "iPhone SE",
+      "modelo": "3ª geração 2022",
+      "ano": 2022,
+      "preco": 429.99,
+      "imagem": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTlgvFHqgeSYeImsPeZDeQn4aNFDgY7mcjcJlEaNRQI-gYtL397f1Gszs3LZ5ZwWibqNhOfLvwklk-FA3O8H4bKTCe3DJ0B9MGyY08Xexqp3JMCdL8tOLOmSts&usqp=CAE",
+      "ListaCores": [
+        {
+          "nomeCor": "Preto",
+          "valorCor": "#000000"
+        },
+        {
+          "nomeCor": "Branco",
+          "valorCor": "#F5F5F5"
+        },
+        {
+          "nomeCor": "Vermelho",
+          "valorCor": "#FF0000"
+        }
+      ],
+      "ListaArmazenamentos": [
+        {
+          "capacidade": "64GB",
+          "preco": 429.99
+        },
+        {
+          "capacidade": "128GB",
+          "preco": 479.99
+        }
+      ],
+      "id": "b1f5"
+    },
+    {
+      "id": "716e",
+      "nome": "iPhone 16",
+      "modelo": "Pro Max",
+      "ano": "2024",
+      "preco": "55999",
+      "ListaCores": [
+        {
+          "nomeCor": "carbono",
+          "valorCor": "#000000"
+        }
+      ],
+      "ListaArmazenamentos": [
+        {
+          "capacidade": "500GB",
+          "preco": "1200"
+        }
+      ],
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSBq_glgrvJV27Qv6sNEgOqjY_xu4OPn9aw-pzBHGwHaPqr5qj4IQerGL1NcEJznRVShM7ifnC_2YSu-Hoe9syhrzUE32SqdA&usqp=CAE"
+    },
+    {
+      "id": "e944",
+      "nome": "iPhone 13",
+      "modelo": "Pro",
+      "ano": "2022",
+      "preco": "3499",
+      "ListaCores": [
+        {
+          "nomeCor": "Cinza",
+          "valorCor": "#E0E0E0"
+        },
+        {
+          "nomeCor": "Vermelho",
+          "valorCor": "red"
+        }
+      ],
+      "ListaArmazenamentos": [
+        {
+          "capacidade": "128GB",
+          "preco": "600"
+        }
+      ],
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQEk1osL8OcVf61ZSgj0JgWvaM-E5lh7E063834nj1qAwxzmh46EF_KSTeueVTdctGr2LC0O4h5a1IcosxB2vovJ5ivAro32iX2yfwkjHgTF6va6Doj5PiG&usqp=CAE"
     }
   ],
-  "watch": []
+  "ipad": [
+    {
+      "nome": "iPad Pro",
+      "modelo": "11 polegadas, M2 2023",
+      "ano": 2023,
+      "preco": 799.99,
+      "imagem": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRWKcHjDuPQc__KVQIzo5jLLbaNBo-TRCeph10VYQeO35kYVG9TpBBorBlpM7bvAyCKuyulM-b7w36OWqFyv3O3jKLhrj2V6MLgmKEBqjYK&usqp=CAE",
+      "ListaCores": [
+        {
+          "nomeCor": "Prateado",
+          "valorCor": "#C0C0C0"
+        },
+        {
+          "nomeCor": "Espacial",
+          "valorCor": "#3E3E3E"
+        }
+      ],
+      "ListaArmazenamentos": [
+        {
+          "capacidade": "128GB",
+          "preco": 799.99
+        },
+        {
+          "capacidade": "256GB",
+          "preco": 899.99
+        }
+      ],
+      "id": "3c78"
+    },
+    {
+      "nome": "iPad Air",
+      "modelo": "10,9 polegadas, 5ª geração 2023",
+      "ano": 2023,
+      "preco": 599.99,
+      "imagem": "data:image/webp;base64,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",
+      "ListaCores": [
+        {
+          "nomeCor": "Espacial",
+          "valorCor": "#3E3E3E"
+        },
+        {
+          "nomeCor": "Estelar",
+          "valorCor": "#F5E1CE"
+        },
+        {
+          "nomeCor": "Azul",
+          "valorCor": "#4D8F9C"
+        }
+      ],
+      "ListaArmazenamentos": [
+        {
+          "capacidade": "64GB",
+          "preco": 599.99
+        },
+        {
+          "capacidade": "256GB",
+          "preco": 699.99
+        }
+      ],
+      "id": "9d5f"
+    },
+    {
+      "nome": "iPad 10",
+      "modelo": "10,9 polegadas, 2022",
+      "ano": 2022,
+      "preco": 449.99,
+      "imagem": "data:image/webp;base64,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",
+      "ListaCores": [
+        {
+          "nomeCor": "Azul",
+          "valorCor": "#4287f5"
+        },
+        {
+          "nomeCor": "Amarelo",
+          "valorCor": "#f8d300"
+        }
+      ],
+      "ListaArmazenamentos": [
+        {
+          "capacidade": "64GB",
+          "preco": 449.99
+        },
+        {
+          "capacidade": "256GB",
+          "preco": 549.99
+        }
+      ],
+      "id": "3a78"
+    },
+    {
+      "id": "70eb",
+      "nome": "iPad ",
+      "modelo": "Air ",
+      "ano": "2023",
+      "preco": "6299",
+      "ListaCores": [
+        {
+          "nomeCor": "Preto ",
+          "valorCor": "#000000"
+        }
+      ],
+      "ListaArmazenamentos": [
+        {
+          "capacidade": "128GB",
+          "preco": "600"
+        }
+      ],
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSUQLG1SueavoX_A7yzJW9ESK226Gakw74E4GGlYmebaq-mHsNsN6LZR6TTl1ppqefBh-8emjnXG0dwvAQFlt_Bv489dgbbK7LftHyUDnCGykQ5zTds23wv&usqp=CAE"
+    }
+  ],
+  "watch": [
+    {
+      "nome": "Apple Watch Ultra",
+      "modelo": "GPS + Celular 2023",
+      "ano": 2023,
+      "preco": 799.99,
+      "imagem": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQYKqGz-wD0Kk5n8gLFEdpkW8TVrK_ZRv_wkN1g-agOELv1-3PtuBKIuSns0FqeE4YvD5NopFNdn0_lB6aNCl9ZdBa4zRhrM9TlERDrEXeWvlNcJpX0oTHKXw&usqp=CAE",
+      "ListaCores": [
+        {
+          "nomeCor": "Titânio",
+          "valorCor": "#A9A9A9"
+        }
+      ],
+      "ListaArmazenamentos": [
+        {
+          "capacidade": "32GB",
+          "preco": 799.99
+        }
+      ],
+      "id": "9a2f"
+    },
+    {
+      "nome": "Apple Watch Series 9",
+      "modelo": "GPS 2023",
+      "ano": 2023,
+      "preco": 399.99,
+      "imagem": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQvBxQ5jofLMxkV8gv9kAFqBP14jKq9twnE2jNM6kGPpfCdtWYX_MysjomIwNvt0PQD4DIkYD4ghHNBSgMY49GjHP0NnmQeoBTPMqnqR-BXwlBFdWygV7Jwng&usqp=CAE",
+      "ListaCores": [
+        {
+          "nomeCor": "Estelar",
+          "valorCor": "#F5E1CE"
+        },
+        {
+          "nomeCor": "Meia-Noite",
+          "valorCor": "#4A4A4A"
+        }
+      ],
+      "ListaArmazenamentos": [
+        {
+          "capacidade": "32GB",
+          "preco": 399.99
+        }
+      ],
+      "id": "f1c2"
+    },
+    {
+      "nome": "Apple Watch SE",
+      "modelo": "GPS 2023",
+      "ano": 2023,
+      "preco": 249.99,
+      "imagem": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSyDJjrFmJ6ukGk2S6YxsyU9AV_ju5QM7ADxCvXKuUyDpCkUab6QfXgoSOSQTN8pP8cwvHee8SHl_yytfGQiY_hSV4w_TF9dOVoDbSvzj1sIEtIxdxd9ggUzGU&usqp=CAE",
+      "ListaCores": [
+        {
+          "nomeCor": "Prateado",
+          "valorCor": "#C0C0C0"
+        },
+        {
+          "nomeCor": "Espacial",
+          "valorCor": "#4A4A4A"
+        }
+      ],
+      "ListaArmazenamentos": [
+        {
+          "capacidade": "32GB",
+          "preco": 249.99
+        }
+      ],
+      "id": "2b8e"
+    }
+  ]
 }

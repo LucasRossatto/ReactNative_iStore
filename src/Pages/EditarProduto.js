@@ -176,7 +176,10 @@ export default function EditarProduto() {
 
       {/* Buscar produto ao clicar no botão */}
       <TouchableOpacity
-        style={[style.buttonStyleID, (loading || !idProduto) && { opacity: 0.7 }]}
+        style={[
+          style.buttonStyleID,
+          (loading || !idProduto) && { opacity: 0.7 },
+        ]}
         onPress={() => buscarProduto(idProduto)}
         disabled={loading || !idProduto}
       >

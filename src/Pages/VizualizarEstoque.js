@@ -31,36 +31,41 @@ export default function Estoque() {
 
   const listarProdutos = (categoriaUrl) => {
     setLoading(true);
-  
+
     axios
       .get(`http://10.0.2.2:3000${categoriaUrl}`)
       .then((response) => {
         if (response.data && Array.isArray(response.data)) {
           // Verifica se a resposta contém dados e se é um array válido
-          const produtosValidos = response.data.map((produto) => {
-            // Valida cada produto antes de usá-lo
-            if (produto) {
-              return produto;
-            } else {
-              // Caso algum item tenha propriedades nulas ou indefinidas
-              console.warn('Produto com dados inválidos encontrado:', produto);
-              return null; 
-            }
-          }).filter(Boolean); 
+          const produtosValidos = response.data
+            .map((produto) => {
+              // Valida cada produto antes de usá-lo
+              if (produto) {
+                return produto;
+              } else {
+                // Caso algum item tenha propriedades nulas ou indefinidas
+                console.warn(
+                  "Produto com dados inválidos encontrado:",
+                  produto
+                );
+                return null;
+              }
+            })
+            .filter(Boolean);
           // Se a categoria for encontrado  e não haver produto retorna um alerta
           if (produtosValidos.length > 0) {
             setProdutos(produtosValidos);
           } else {
             Alert.alert("Nenhum produto encontrado"),
-            console.warn("Nenhum produto encontrado"),
-            setProdutos([]);
+              console.warn("Nenhum produto encontrado"),
+              setProdutos([]);
           }
-        } 
+        }
         setLoading(false);
       })
       .catch((error) => {
-        console.error('Erro ao buscar produtos', error);
-        setProdutos([]); 
+        console.error("Erro ao buscar produtos", error);
+        setProdutos([]);
         setLoading(false);
       });
   };
@@ -392,8 +397,8 @@ const noImage = StyleSheet.create({
   container: {
     alignItems: "center",
     justifyContent: "center",
-    paddingHorizontal:8,
-    maxWidth:112,
+    paddingHorizontal: 8,
+    maxWidth: 112,
   },
   image: {
     width: 36,
@@ -401,9 +406,8 @@ const noImage = StyleSheet.create({
     resizeMode: "contain",
   },
   title: {
-    fontSize:12,
-    fontWeight:"bold",
-    textAlign:"center"
+    fontSize: 12,
+    fontWeight: "bold",
+    textAlign: "center",
   },
-  
 });
